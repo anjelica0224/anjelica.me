@@ -12,3 +12,6 @@
   --font-modern : "Cinzel" , serif
 }
 
+.triangle{
+  @apply w-0 h-0 border-l-[0.4em] border-y-[0.3em] border-y-transparent border-solid
+}
