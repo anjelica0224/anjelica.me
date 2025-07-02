@@ -9,7 +9,15 @@
 
 @theme{
   --color-midnight-black : #191919;
-  --font-modern : "Cinzel" , serif
+  --font-modern : "Cinzel" , serif;
+  --font-galaxy : "DistantGalaxy";
+}
+@font-face {
+  font-family: 'DistantGalaxy';
+  src: url('/fonts/LyonText-Regular-Cy-Gr-Web.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 .triangle{
