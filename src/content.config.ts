@@ -11,4 +11,13 @@ const experiences = defineCollection({
 	})
 })
 
-export const collections = { experiences };
+const projects = defineCollection({
+	loader: file("src/content/projects.yaml"),
+	schema: z.object({
+		id: z.string(),
+		excerpt: z.string(),
+		tech: z.array(z.string())
+	})
+})
+
+export const collections = { experiences, projects };

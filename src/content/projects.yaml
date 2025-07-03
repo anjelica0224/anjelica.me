@@ -1,0 +1,12 @@
+- websocket:
+  id: Bell Jar
+  excerpt: Real-time chat server with quirky bandnames, cool avatars, supports all media files upto 5 MB.  
+  tech: [React.js, TailwindCSS, Node.js, WebSocket]
+- emotion:
+  id: Emotion Recognition in Sarcasm
+  excerpt: Multi-modal emotion recognition in Code-Mixed(Hinglish) sarcastic utterances.
+  tech: [Neural network, Python, Random Forest]
+- subsad:
+  id: SubsAd
+  excerpt: Platform for substitute teachers in schools — WIP.
+  tech: [React.js, MongoDB, Express.js, Clerk]
