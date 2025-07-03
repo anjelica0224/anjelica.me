@@ -5,6 +5,11 @@
  */
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cinzel:wght@400..900&family=Instrument+Serif:ital@0;1&display=swap');
 @import "tailwindcss";
+@import "tw-animate-css";
+/*
+  ---break---
+ */
+@custom-variant dark (&:is(.dark *));
 @plugin '@tailwindcss/typography';
 
 @theme{
@@ -22,4 +27,7 @@
 
 .triangle{
   @apply w-0 h-0 border-l-[0.4em] border-y-[0.3em] border-y-transparent border-solid
+}
+.box{
+  @apply sm:w-1/2 w-3/5 p-1 h-10 bg-neutral-800 mx-auto text-zinc-300 sm:text-2xl text-center rounded-md font-extrabold font-galaxy
 }

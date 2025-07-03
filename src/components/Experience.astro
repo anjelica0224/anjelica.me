@@ -1,0 +1,17 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import { Timeline9 } from './timeline9';
+const allExperiences = await getCollection('experiences');
+// console.log(allExperiences)
+---
+
+<section class="">
+    <div class="box">EXPERIENCES</div>
+    <!-- {allExperiences.map(one => (
+        <li class="prose">
+            <p class="">{one.data.id}</p>
+            <p class="">{one.data.role}</p>
+        </li>
+    ))} -->
+    <Timeline9/>
+</section>

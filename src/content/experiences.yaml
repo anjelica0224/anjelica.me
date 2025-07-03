@@ -1,0 +1,30 @@
+- company:
+  id: Agmitra Technologies
+  role: Software Intern
+  from: 2025-05-20
+  to: 2025-06-30
+  job: Worked on optimization polarimeter algorithms for DigiSugar in R&D  and hosted/enhanced the React/Express/MongoDB website by adding new features.
+- company:
+  id: LEAP - AI@Plaksha
+  role: Member
+  from: 2025-01-15
+  to: Present
+  job: Built the backend, using FastAPI and MongoDB for a game where user enters emojis and the AI guesses the movie for the Foundation Day Project.
+- company:
+  id: Dixon IoT Lab, Plaksha University
+  role: ML Intern
+  from: 2025-05-20
+  to: 2025-06-30
+  job: Worked on developing machine learning models using transfer Learning and data preparation using the Autodistill package for auto labelling of traffic data.
+- company:
+  id: International Centre for Theoretical Sciences
+  role: Summer School for Women in Mathematics and Statistics
+  from: 2024-05-15
+  to: 2024-05-30
+  job: Among 76 girls from across India, I got the opportunity to be a part of the SWMS'24 conducted by Siva Athreya(ISI, Bangalore and ICTS-TIFR), Dootika Vats(IIT Kanpur), Rhythm Grover(IIT Guwahati) and other professors from reputed institutes of India.
+- company:
+  id: The New York Academy of Sciences
+  role: Member of 'The New York Academy of Sciences' 1000 Girls 1000 Futures
+  from: 2021-09-10
+  to: 2022-03-10
+  job: The New York Academy of Sciences invites young women ages 13-17 around the world to join 1000 Girls 1000 Futures to receive mentorship from female STEM experts, gain access to college readiness and leadership coursework, and network with other girls passionate about STEM.1000 Girls 1000 Futures empowers young women to learn independently and work collaboratively on Launchpad, the Academy’s unique online learning platform. On Launchpad, students complete the coursework at their own pace and apply their skills to work on different projects with their peers. Mentors are available to guide students throughout the program, from navigating the college application process to setting career goals.

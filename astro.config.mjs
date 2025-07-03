@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap';
 import devtoolsJson from 'vite-plugin-devtools-json';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
+import yaml from '@rollup/plugin-yaml';
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,6 +13,6 @@ export default defineConfig({
   integrations: [mdx(), sitemap(), react()],
 
   vite: {
-    plugins: [tailwindcss(), devtoolsJson(),],
+    plugins: [tailwindcss(), devtoolsJson(),yaml()],
   },
 });
