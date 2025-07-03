@@ -11,14 +11,14 @@ const allProjects = await getCollection('projects');
             Exploring, building and learning along the way &lt;3
         </p>
     </blockquote>
-    <div class="flex mt-4 mx-auto sm:w-1/2 ">
+    <div class="sm:flex-row flex flex-col w-3/5 mt-4 gap-4 mx-auto sm:w-1/2">
         {allProjects.map(one => (
-            <div class="flex p-4 rounded-2xl flex-col flex-wrap sm:w-3/10">
-                <span class="font-galaxy text-neutral-300 sm:text-lg font-extrabold">{one.data.id}</span>
-                <p class="mt-2 font-extralight text-neutral-300 text-[12px] sm:text-sm">{one.data.excerpt}</p>
+            <div class="flex p-4 rounded-2xl flex-col bg-neutral-900 hover:bg-neutral-800 sm:w-3/10">
+                <span class="font-galaxy text-neutral-300 sm:text-lg text-sm font-extrabold">{one.data.id}</span>
+                <p class="mt-2 font-extralight text-neutral-300 text-xs sm:text-sm">{one.data.excerpt}</p>
                 <div class="flex rounded mt-2 flex-wrap ">
                     {(one.data.tech).map(label => (
-                        <span class="text-[10px] mt-2 text-neutral-300 bg-neutral-800 mr-2 p-1 rounded-sm">{label}</span>
+                        <span class=" mt-2 text-neutral-300 text-[10px] bg-neutral-800 mr-2 p-1 rounded-sm">{label}</span>
                     ))}
                 </div>
                 
