@@ -11,12 +11,13 @@ const allExperiences = await getCollection('experiences');
             {allExperiences.map(one => (
                 <div class="flex  tracking-widest">
                     <div class="flex flex-col items-center">
-                        <div class="w-2 h-2 rounded-full bg-neutral-400"></div>
+                        <div class="mt-2 w-2 h-2 rounded-full bg-neutral-400"></div>
                         <div class=" h-full bg-neutral-800 w-0.5"></div>
                     </div>
                     <div class="flex flex-col px-4 pb-4">
                         <div class="font-bold text-neutral-300 font-modern">{one.data.role}</div>
-                        <div class="font-extralight text-neutral-500 text-xs">{one.data.id}</div>
+                        <div class="font-extralight mb-2 text-neutral-300 text-xs">{one.data.id}</div>
+                        <div class="font-extralight mb-6 text-neutral-400 text-xs">{one.data.time}</div>
                         <div class="font-extralight text-neutral-400 font-galaxy text-sm">{one.data.job}</div>
                     </div>
                 </div>

@@ -6,8 +6,7 @@ const experiences = defineCollection({
 	schema: z.object({
 		id: z.string(),
 		role: z.string(),
-		from: z.date(), 
-		to: z.union([z.date(), z.string()]), 
+		time: z.string(),
 		job: z.string(),	
 	})
 })
