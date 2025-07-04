@@ -7,7 +7,8 @@ const experiences = defineCollection({
 		id: z.string(),
 		role: z.string(),
 		time: z.string(),
-		job: z.string(),	
+		job: z.string(),
+		url: z.string()	
 	})
 })
 
@@ -16,7 +17,8 @@ const projects = defineCollection({
 	schema: z.object({
 		id: z.string(),
 		excerpt: z.string(),
-		tech: z.array(z.string())
+		tech: z.array(z.string()),
+		url: z.string(),
 	})
 })
 

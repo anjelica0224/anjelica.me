@@ -2,11 +2,14 @@
   id: Bell Jar
   excerpt: Real-time chat server with quirky bandnames, cool avatars, supports all media files upto 5 MB.  
   tech: [React.js, Node.js, TailwindCSS, WebSocket]
+  url: https://github.com/anjelica0224/websocket
 - emotion:
   id: Emotion Recognition in Sarcasm
   excerpt: Multi-modal emotion recognition in Code-Mixed(Hinglish) sarcastic utterances.
   tech: [ Python, Random Forest, Neural network]
+  url: https://github.com/IshitaR0/EmotionsInOurSarcasm
 - subsad:
   id: SubsAd
   excerpt: Platform for substitute teachers in schools. (work in progress)
   tech: [React.js, MongoDB, Clerk, Express.js]
+  url: https://github.com/anjelica0224/SubsAd

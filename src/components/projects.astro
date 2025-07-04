@@ -13,7 +13,8 @@ const allProjects = await getCollection('projects');
     </blockquote>
     <div class="flex flex-row flex-wrap w-3/5 mt-4 gap-4 mx-auto sm:w-1/2">
         {allProjects.map(one => (
-            <div class="flex flex-col flex-wrap p-4 rounded-2xl w-4/5 sm:w-50 bg-neutral-900 hover:bg-neutral-800">
+            <a href={one.data.url} target="_blank">
+                <div class="flex flex-col flex-wrap p-4 rounded-2xl w-4/5 sm:w-50 bg-neutral-900 hover:bg-neutral-800">
                 <span class="font-galaxy text-neutral-300 sm:text-lg text-sm font-extrabold">{one.data.id}</span>
                 <p class="mt-2 font-extralight text-neutral-300 text-xs sm:text-sm">{one.data.excerpt}</p>
                 <div class="flex rounded mt-2 flex-wrap">
@@ -23,6 +24,8 @@ const allProjects = await getCollection('projects');
                 </div>
                 
             </div>
+            </a>
+            
         ))}
     </div>
     <hr class="line mt-8 ">
