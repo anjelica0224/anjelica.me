@@ -8,5 +8,5 @@
   tech: [Neural network, Python, Random Forest]
 - subsad:
   id: SubsAd
-  excerpt: Platform for substitute teachers in schools — WIP.
+  excerpt: Platform for substitute teachers in schools. (work in progress)
   tech: [React.js, MongoDB, Express.js, Clerk]

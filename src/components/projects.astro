@@ -4,14 +4,14 @@ const allProjects = await getCollection('projects');
 ---
 
 <section class="">
-    <hr class="line"></hr>
+    <hr class="line mt-4"></hr>
     <div class="box">PROJECTS</div>
     <blockquote class="p-2 my-4 mb-6 b w-1/2 mx-auto">
         <p class="font-galaxy italic leading-relaxed text-neutral-300 text-sm ">
             Exploring, building and learning along the way &lt;3
         </p>
     </blockquote>
-    <div class="sm:flex-row flex flex-col w-3/5 mt-4 gap-4 mx-auto sm:w-1/2">
+    <div class="sm:flex-row flex flex-col flex-wrap w-3/5 mt-4 gap-4 mx-auto sm:w-1/2">
         {allProjects.map(one => (
             <div class="flex p-4 rounded-2xl flex-col bg-neutral-900 hover:bg-neutral-800 sm:w-3/10">
                 <span class="font-galaxy text-neutral-300 sm:text-lg text-sm font-extrabold">{one.data.id}</span>
@@ -25,4 +25,5 @@ const allProjects = await getCollection('projects');
             </div>
         ))}
     </div>
+    <hr class="line mt-8 ">
 </section>
