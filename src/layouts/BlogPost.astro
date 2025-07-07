@@ -1,0 +1,12 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro'
+import type { CollectionEntry } from 'astro:content';
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+---
+<SiteLayout>
+    {post}
+</SiteLayout>
