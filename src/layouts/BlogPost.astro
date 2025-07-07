@@ -1,12 +1,19 @@
 ---
-import SiteLayout from '../layouts/SiteLayout.astro'
 import type { CollectionEntry } from 'astro:content';
-interface Props {
-  post: CollectionEntry<'blog'>;
-}
+import FormattedDate from '../components/FormattedDate.astro';
+import { Image } from 'astro:assets';
+import SiteLayout from './SiteLayout.astro';
 
-const { post } = Astro.props;
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 <SiteLayout>
-    {post}
+  <article class="md:w-1/2 w-3/5 mx-auto p-4 prose">
+    <span class="text-neutral-300 md:text-4xl font-galaxy font-extrabold text-2xl">{title}</span>
+    <div class="mt-8">
+      <slot/>
+    </div>
+	</article>
 </SiteLayout>
+		
