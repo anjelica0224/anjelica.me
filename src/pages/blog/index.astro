@@ -9,12 +9,27 @@ const posts = (await getCollection('blog')).sort(
 );
 ---
 <SiteLayout>
-	<aside class="absolute z-40 w-1/5">
-		<img src="/asset.jpeg" class="mx-auto mt-14 w-3/4 "/>
+	<aside class="z-40 absolute w-1/5 " >
+		<div class="mt-20 text-center text-neutral-500 text-xs p-4 tracking-widest font-galaxy mx-auto w-10/12">
+			just another random human being, trying to break free of the chains that I unconsciously forged myself, assuming it was somebody else who pushed me inside this cage. 
+			this cage, of wild thoughts, floating all around. <br>
+			<!-- <q>words do not express thoughts very well. they always become a little different immediately after they are expressed, a little distorted, a little foolish.</q>
+			perhaps I wish to be the distorted image that does make a little sense, not necessarily to everyone. -->
+		</div>
+		<div class=" text-center text-neutral-500 font-galaxy text-xs mx-auto w-10/12">a raging dysphoria</div>
+		<div class=" mt-4 text-center text-neutral-500 text-xs font-galaxy  mx-auto w-10/12">onism that burns</div>
+		<div class=" mt-16 text-center bg-stone-700 text-neutral-500 text-sm font-galaxy mx-auto w-10/12">explore</div>
+		<div class=" mt-2 text-center text-neutral-500 text-sm font-galaxy mx-auto w-10/12">Home</div>
+		<div class=" mt-2 text-center text-neutral-500 text-sm font-galaxy mx-auto w-10/12">Projects</div>
+		<div class=" mt-2 text-center text-neutral-500 text-sm font-galaxy mx-auto w-10/12">Gallery</div>
+		<img src="imagcopy.png" class="mx-auto mt-10 opacity-70 w-9/12 rounded-2xl">
+		
+
 	</aside>
-	<section>
+	<section class="">
 		<h1 class="text-neutral-300 text-center mx-auto text-lg sm:text-2xl font-galaxy font-extrabold">my fabricated nutshell</h1>
-		<hr class="line mt-4">
+		<h2 class="text-neutral-300 mt-6 text-center mx-auto text-[8px] sm:text-xs italic font-mono font-extralight">my head is a hive of words that won't settle down.</h1>
+		<hr class="line mt-2">
 		<div class="grid sm:w-1/2 w-3/5 mx-auto mt-6 sm:grid-cols-2 md:grid-cols-3 gap-4">
 			{posts.map((post) => (
 				<div class="bg-neutral-800 rounded-2xl overflow-hidden">
@@ -31,5 +46,15 @@ const posts = (await getCollection('blog')).sort(
 				</div>
 			))}
 		</div>
+	</section>
+	<section class="">
+		<h2 class="text-neutral-300 mt-6 text-center mx-auto text-[8px] sm:text-xs italic font-mono font-extralight">idk.</h1>
+		<hr class="line mt-2">
+		<div class=" text-neutral-500 font-galaxy text-xs mx-auto w-10/12 text-center">a raging dysphoria</div>
+		<div class="grid sm:w-1/2 w-3/5 mx-auto mt-6 sm:grid-cols-2 md:grid-cols-3 gap-4">
+			
+		</div>
+
+		
 	</section>
 </SiteLayout>
