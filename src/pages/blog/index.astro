@@ -9,23 +9,30 @@ const posts = (await getCollection('blog')).sort(
 );
 ---
 <SiteLayout>
-	<aside class="z-40 absolute w-1/5 " >
-		<div class="mt-20 text-center text-neutral-500 text-xs p-4 tracking-widest font-galaxy mx-auto w-10/12">
-			just another random human being, trying to break free of the chains that I unconsciously forged myself, assuming it was somebody else who pushed me inside this cage. 
-			this cage, of wild thoughts, floating all around. <br>
-			<!-- <q>words do not express thoughts very well. they always become a little different immediately after they are expressed, a little distorted, a little foolish.</q>
-			perhaps I wish to be the distorted image that does make a little sense, not necessarily to everyone. -->
-		</div>
-		<div class=" text-center text-neutral-500 font-galaxy text-xs mx-auto w-10/12">a raging dysphoria</div>
-		<div class=" mt-4 text-center text-neutral-500 text-xs font-galaxy  mx-auto w-10/12">onism that burns</div>
-		<div class=" mt-16 text-center bg-stone-700 text-neutral-500 text-sm font-galaxy mx-auto w-10/12">explore</div>
-		<div class=" mt-2 text-center text-neutral-500 text-sm font-galaxy mx-auto w-10/12">Home</div>
-		<div class=" mt-2 text-center text-neutral-500 text-sm font-galaxy mx-auto w-10/12">Projects</div>
-		<div class=" mt-2 text-center text-neutral-500 text-sm font-galaxy mx-auto w-10/12">Gallery</div>
-		<img src="imagcopy.png" class="mx-auto mt-10 opacity-70 w-9/12 rounded-2xl">
+	<aside class="sm:w-1/5 hidden md:block absolute left-0" >
+		 <div class="mt-16 flex h-screen flex-col gap-4 text-center text-neutral-500 text-lg font-galaxy mx-auto">
+			<a href="/" class="hover:text-white transition-colors"><span>Home</span></a>
+			<a href="/" class="hover:text-white transition-colors"><span>Projects</span></a>
+			<a href="/" class="hover:text-white transition-colors"><span>Gallery</span></a>
+			<a href="/blog" class="hover:text-white transition-colors"><span>Blog</span></a>
+			<a href="/blog" class="hover:text-white transition-colors"><span>Me</span></a>
+			<div class="text-xs tracking-widest mt-6 bg-neutral-800 p-4 ml-10 hover:bg-neutral-700 transition-colors hover:text-white">
+				just another random human being, trying to break free of the chains that I unconsciously forged myself, assuming it was somebody else who pushed me inside this cage. 
+				this cage, of wild thoughts, floating all around. <br><br>
+				<q>words do not express thoughts very well. they always become a little different immediately after they are expressed, a little distorted, a little foolish.</q><br><br>
+				perhaps I wish to be the distorted image that does make a little sense, not necessarily to everyone.
+			</div>
+			<div class="flex-grow"></div>
+			<img src="jo.png" class="mt-20 scale-248">
+		 </div>
 		
-
 	</aside>
+
+	<aside class="sm:w-1/5 hidden md:flex md:flex-col absolute p-8 gap-20 right-6 " >
+		<img src="s.jpg" class="opacity-70 scale-120 mt-16">
+		<img src="rocket.gif" class="mt-auto">	
+	</aside>
+
 	<section class="">
 		<h1 class="text-neutral-300 text-center mx-auto text-lg sm:text-2xl font-galaxy font-extrabold">my fabricated nutshell</h1>
 		<h2 class="text-neutral-300 mt-6 text-center mx-auto text-[8px] sm:text-xs italic font-mono font-extralight">my head is a hive of words that won't settle down.</h1>
@@ -47,14 +54,30 @@ const posts = (await getCollection('blog')).sort(
 			))}
 		</div>
 	</section>
-	<section class="">
-		<h2 class="text-neutral-300 mt-6 text-center mx-auto text-[8px] sm:text-xs italic font-mono font-extralight">idk.</h1>
-		<hr class="line mt-2">
-		<div class=" text-neutral-500 font-galaxy text-xs mx-auto w-10/12 text-center">a raging dysphoria</div>
-		<div class="grid sm:w-1/2 w-3/5 mx-auto mt-6 sm:grid-cols-2 md:grid-cols-3 gap-4">
-			
-		</div>
 
-		
+	<hr class="line mt-4">
+
+	<section class="sm:w-1/2 w-3/5 mx-auto mb-12">
+		<!-- <h2 class="text-neutral-300 mt-6 text-center mx-auto text-[8px] sm:text-xs italic font-mono font-extralight">unfinished scribbles</h1> -->
+		<!-- <div class=" text-neutral-500 font-galaxy text-xs mx-auto w-10/12 text-center">a raging dysphoria</div> -->
+		<span class=" text-neutral-300 text-md font-galaxy italic">Other things I've written</span>
+		<div class="flex mt-4 gap-4">
+			<div class="flex flex-col items-start">
+				{posts.map((post) => (
+					<div class="overflow-hidden flex flex-col mt-4">
+						<div class="flex items-center tracking-wider gap-4">
+							<a href={`/blog/${post.id}/`} class="">
+								<span class="text-neutral-300 text-md font-bold font-galaxy">{post.data.title}</span>
+							</a>
+							<div class="text-xs text-neutral-400"><FormattedDate date={post.data.pubDate}/></div>
+						</div>
+							<div class="text-xs text-neutral-400 overflow-ellipsis line-clamp-1">{post.data.description}</div>
+					</div>
+				))}
+			</div> 
+		</div>
 	</section>
+	
+	<hr class="line mt-4">
+	
 </SiteLayout>
