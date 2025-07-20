@@ -12,6 +12,23 @@ const experiences = defineCollection({
 	})
 })
 
+const books = defineCollection({
+	loader: file("src/content/mybooks.yaml"),
+	schema: z.object({
+		id: z.string(),
+		title: z.string(),
+	})
+})
+
+const notes = defineCollection({
+	loader: file("src/content/notes.yaml"),
+	schema: z.object({
+		id: z.string(),
+		body: z.string(),
+		author: z.string().optional()
+	})
+})
+
 const projects = defineCollection({
 	loader: file("src/content/projects.yaml"),
 	schema: z.object({
@@ -29,8 +46,11 @@ const blog = defineCollection({
 		description: z.string(),
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
-		heroImage: image().optional(),
+		heroImage: z.string().optional(),
+		otherImages: z.array(z.string()).optional(),
+		rightImages: z.array(z.string()).optional(),
+		layout: z.array(z.number()).optional()
 	}),
 });
 
-export const collections = { experiences, projects, blog };
+export const collections = { books, notes, experiences, projects, blog };
