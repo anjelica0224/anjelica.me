@@ -1,0 +1,18 @@
+- book1:
+  id: hungergames
+  title: The Hunger Games triology
+- book2:
+  id: divergent
+  title: Divergent
+- book3:
+  id: seven
+  title: The Seven Husbands of Evelyn Hugo
+- book4:
+  id: infernal
+  title: The Infernal Devices
+- book5:
+  id: mortal
+  title: The Mortal Instruments
+- book6:
+  id: ayn
+  title: Atlas Shrugged
