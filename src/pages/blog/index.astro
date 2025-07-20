@@ -1,83 +1,93 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro'
 import { getCollection } from 'astro:content';
-import { Image } from 'astro:assets';
 import FormattedDate from '../../components/FormattedDate.astro';
+import Menu from '../../components/Menu.astro';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+const gridPostTitles = [
+	"unconventional me",
+	"a delusion of home", 
+	"not another paradox",
+	"twelve homes & blue skies",
+	"nothing nevermind",
+	"In a nutshell"
+];
+
+const gridPosts = posts.filter(post => gridPostTitles.includes(post.data.title));
+const listPosts = posts.filter(post => !gridPostTitles.includes(post.data.title));
 ---
-<SiteLayout>
-	<aside class="sm:w-1/5 hidden md:block absolute left-0" >
-		 <div class="mt-16 flex h-screen flex-col gap-4 text-center text-neutral-500 text-lg font-galaxy mx-auto">
-			<a href="/" class="hover:text-white transition-colors"><span>Home</span></a>
-			<a href="/" class="hover:text-white transition-colors"><span>Projects</span></a>
-			<a href="/" class="hover:text-white transition-colors"><span>Gallery</span></a>
-			<a href="/blog" class="hover:text-white transition-colors"><span>Blog</span></a>
-			<a href="/blog" class="hover:text-white transition-colors"><span>Me</span></a>
-			<div class="text-xs tracking-widest mt-6 bg-neutral-800 p-4 ml-10 hover:bg-neutral-700 transition-colors hover:text-white">
-				just another random human being, trying to break free of the chains that I unconsciously forged myself, assuming it was somebody else who pushed me inside this cage. 
-				this cage, of wild thoughts, floating all around. <br><br>
-				<q>words do not express thoughts very well. they always become a little different immediately after they are expressed, a little distorted, a little foolish.</q><br><br>
-				perhaps I wish to be the distorted image that does make a little sense, not necessarily to everyone.
-			</div>
-			<div class="flex-grow"></div>
-			<img src="jo.png" class="mt-20 scale-248">
-		 </div>
-		
-	</aside>
-
-	<aside class="sm:w-1/5 hidden md:flex md:flex-col absolute p-8 gap-20 right-6 " >
-		<img src="s.jpg" class="opacity-70 scale-120 mt-16">
-		<img src="rocket.gif" class="mt-auto">	
-	</aside>
-
-	<section class="">
-		<h1 class="text-neutral-300 text-center mx-auto text-lg sm:text-2xl font-galaxy font-extrabold">my fabricated nutshell</h1>
-		<h2 class="text-neutral-300 mt-6 text-center mx-auto text-[8px] sm:text-xs italic font-mono font-extralight">my head is a hive of words that won't settle down.</h1>
-		<hr class="line mt-2">
-		<div class="grid sm:w-1/2 w-3/5 mx-auto mt-6 sm:grid-cols-2 md:grid-cols-3 gap-4">
-			{posts.map((post) => (
-				<div class="bg-neutral-800 rounded-2xl overflow-hidden">
-					<a href={`/blog/${post.id}/`} class="flex flex-col h-full">
-						{post.data.heroImage && (
-							<div class="flex-shrink-0">
-								<Image class="rounded-t-2xl w-full h-32 sm:h-40 md:h-30 object-cover" src={post.data.heroImage} alt="" />
-							</div>
-						)}
-						<div class="flex-1 p-3 flex items-center justify-center">
-							<h4 class="text-neutral-300 font-galaxy text-xs md:text-sm text-center leading-tight">{post.data.title}</h4>
-						</div>
-					</a>
+<SiteLayout headerImage="header-image.webp" pfp="anjelica.webp">
+	<div class="sm:grid sm:grid-cols-4">
+		<aside class="sm:w-4/5 hidden md:flex md:flex-col left-4" >
+			<div class="mt-30 flex h-screen flex-col gap-4 text-center text-neutral-500 text-lg font-galaxy mx-auto">
+				<Menu active="Blog"/>
+				<div class="text-xs tracking-widest mt-6 bg-neutral-800 p-4 ml-10 hover:bg-neutral-700 transition-colors hover:text-white">
+					just another random human being, trying to break free of the chains that I unconsciously forged myself, assuming it was somebody else who pushed me inside this cage. 
+					this cage, of wild thoughts, floating all around. <br><br>
+					<q>words do not express thoughts very well. they always become a little different immediately after they are expressed, a little distorted, a little foolish.</q><br><br>
+					perhaps I wish to be the distorted image that does make a little sense, not necessarily to everyone.
 				</div>
-			))}
-		</div>
-	</section>
+				<h2 class="text-neutral-300 mt-6 text-center mx-auto text-[8px] sm:text-xs italic font-mono font-extralight">a raging dysphoria</h1>
+				<div class=" text-neutral-500 font-galaxy text-xs mx-auto w-10/12 text-center">onism that burns</div>
+				<img src="jo.webp" class="mt-8 mb-6 rounded-4xl scale-85 opacity-65">
+			</div>
+		</aside>
 
-	<hr class="line mt-4">
-
-	<section class="sm:w-1/2 w-3/5 mx-auto mb-12">
-		<!-- <h2 class="text-neutral-300 mt-6 text-center mx-auto text-[8px] sm:text-xs italic font-mono font-extralight">unfinished scribbles</h1> -->
-		<!-- <div class=" text-neutral-500 font-galaxy text-xs mx-auto w-10/12 text-center">a raging dysphoria</div> -->
-		<span class=" text-neutral-300 text-md font-galaxy italic">Other things I've written</span>
-		<div class="flex mt-4 gap-4">
-			<div class="flex flex-col items-start">
-				{posts.map((post) => (
-					<div class="overflow-hidden flex flex-col mt-4">
-						<div class="flex items-center tracking-wider gap-4">
-							<a href={`/blog/${post.id}/`} class="">
-								<span class="text-neutral-300 text-md font-bold font-galaxy">{post.data.title}</span>
+		<div class="sm:col-span-2 p-20 sm:p-0">
+			<section class="">
+				<h1 class="text-neutral-300 text-center mx-auto text-lg sm:text-2xl font-galaxy font-extrabold">my fabricated nutshell</h1>
+				<h2 class="text-neutral-300 mt-6 text-center mx-auto text-[8px] sm:text-xs italic font-mono font-extralight">my head is a hive of words that won't settle down.</h1>
+				<hr class="line absolute mt-2">
+				<div class="grid mt-6 sm:grid-cols-2 md:grid-cols-3 gap-4">
+					{gridPosts.map((post) => (
+						<div class="bg-neutral-800 rounded-2xl overflow-hidden">
+							<a href={`/blog/${post.id}/`} class="flex flex-col h-full">
+								{post.data.heroImage && (
+									<div class="flex-shrink-0">
+										<img class="rounded-t-2xl w-full h-32 sm:h-40 md:h-30 object-cover" src={post.data.heroImage} alt="" />
+									</div>
+								)}
+								<div class="flex-1 p-3 flex items-center justify-center">
+									<h4 class="text-neutral-300 font-galaxy text-xs md:text-sm text-center leading-tight">{post.data.title}</h4>
+								</div>
 							</a>
-							<div class="text-xs text-neutral-400"><FormattedDate date={post.data.pubDate}/></div>
 						</div>
-							<div class="text-xs text-neutral-400 overflow-ellipsis line-clamp-1">{post.data.description}</div>
-					</div>
-				))}
-			</div> 
+					))}
+				</div>
+			</section>
+
+			<section class="mb-12 mt-12">
+				<span class=" text-neutral-300 text-md font-galaxy italic">everything i've written</span>
+				<hr class="line absolute mt-2">
+				<div class="flex mt-4 gap-4">
+					<div class="flex flex-col items-start">
+						{posts.map((post) => (
+							<div class="overflow-hidden flex flex-col mt-4">
+								<div class="flex items-center tracking-wider gap-4">
+									<a href={`/blog/${post.id}/`} class="">
+										<span class="text-neutral-300 transition-colors hover:text-white text-md font-bold font-galaxy">{post.data.title}</span>
+									</a>
+									<div class="text-xs text-neutral-400"><FormattedDate date={post.data.pubDate}/></div>
+								</div>
+								<div class="text-xs text-neutral-400 overflow-ellipsis line-clamp-1">{post.data.description}</div>
+							</div>
+						))}
+					</div> 
+				</div>
+			</section>
+			<hr class="line absolute mb-4">
 		</div>
-	</section>
-	
-	<hr class="line mt-4">
+
+		<aside class="sm:w-1/5 hidden md:flex md:flex-col absolute p-8 gap-20 right-6 " >
+			<img src="s.webp" class="opacity-70 scale-120 mt-16"/>
+			<img src="rocket.webp" class="mt-auto"/>	
+			<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4dq4dE9TLg5ifEgpWxTlVS?utm_source=generator" width="110%" height="150" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+		</aside>
+
+	</div>
+
 	
 </SiteLayout>
