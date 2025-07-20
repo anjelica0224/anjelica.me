@@ -5,21 +5,21 @@ import MastHead from '../components/MastHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Firefly from '../components/Firefly.astro';
-const { name } = Astro.props;
+import { imageConfig } from 'astro:assets';
+const { name, headerImage, pfp } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="bg-midnight-black">
+	<body class="bg-midnight-black flex flex-col">
 		<Firefly/>
 		<main>
             <Header/>
-            <MastHead title={name}/>
+            <MastHead title={name} header={headerImage} profile={pfp}/>
             <slot/>
-			
 		</main>
-		<Footer/>
 	</body>
+	<Footer/>
 </html>

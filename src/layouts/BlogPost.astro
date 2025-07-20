@@ -1,19 +1,37 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import FormattedDate from '../components/FormattedDate.astro';
-import { Image } from 'astro:assets';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import SiteLayout from './SiteLayout.astro';
+import Menu from '../components/Menu.astro';
+import Gallery from '../components/Gallery.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
-
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, otherImages, rightImages, layout } = Astro.props;
 ---
-<SiteLayout>
-  <article class="md:w-1/2 w-3/5 mx-auto p-4 prose">
-    <span class="text-neutral-300 md:text-4xl font-galaxy font-extrabold text-2xl">{title}</span>
-    <div class="mt-8">
-      <slot/>
-    </div>
-	</article>
+<SiteLayout headerImage={heroImage}>
+  <div class="grid grid-cols-4 gap-4">
+    <aside class="sm:w-3/5 hidden md:flex md:flex-col left-4" >
+      <div class="mt-20 mb-40 flex gap-6 flex-col text-center text-neutral-500 text-lg font-galaxy mx-auto">
+        <Menu active="Blog"/>
+      </div>
+      <img src="/up.webp" class="scale-280 ml-18 ">
+      <img src="/all.webp" class="scale-280 mt-20 mb-20 ml-20"/>
+      <img src="/aya.webp" class="rounded-2xl ml-16 mt-20 scale-150"/>
+    </aside>
+    <article class="overflow-y-hidden col-span-2 mb-40">
+      <span class="text-neutral-300 md:text-4xl font-galaxy font-extrabold text-2xl">{title}</span>
+      <div class="mt-8">
+        <slot/>
+      </div>
+    </article>
+    <aside class="mt-20 sm:w-4/5 hidden md:flex md:flex-col" >
+      {console.log(otherImages)}
+      <Gallery cols={layout?.[0]} images={otherImages} right={rightImages}/>
+      <img src="/edgar.webp" class="mt-8 opacity-80"/>
+      <iframe class="mt-20" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1cPLddXCqw6uzyWy6tdtlK?utm_source=generator" width="100%" height="152" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <div class="grow"></div>
+      <!-- <img src="/castle2.webp" class="scale-y-120 scale-x-180"/> -->
+    </aside>
+  </div>
+  
 </SiteLayout>
 		
