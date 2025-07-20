@@ -1,0 +1,55 @@
+---
+interface Props {
+  cols?: number;
+  rows?: number;
+  images?: string[];
+  right?: string[];
+}
+
+const { cols = 2, images = [], right = [] } = Astro.props as Props;
+
+const totalImages = images.length + right.length;
+const isFullWidth = totalImages < 3;
+
+const gridStyle = isFullWidth 
+  ? { display: 'grid', gridTemplateColumns: '1fr', gap: '1rem' }
+  : { display: 'grid', gridTemplateColumns: `repeat(${cols}, 1fr)`, gap: '1rem' };
+---
+
+<div style={gridStyle}>
+  {isFullWidth ? (
+    <div class="grid gap-4">
+      {[...images, ...right].map((image) => (
+        <div>
+          <img
+            class="w-full h-full rounded-lg object-cover p-2 object-center"
+            src={image}
+          />
+        </div>
+      ))}
+    </div>
+  ) : (
+    <>
+      <div class="grid gap-4">
+        {images.map((image, index) => (
+          <div>
+            <img
+              class="h-40 w-40 rounded-lg object-cover object-center"
+              src={image}
+            />
+          </div>
+        ))}
+      </div>
+      <div class="grid gap-4">
+        {right.map((image) => (
+          <div>
+            <img
+              class="h-40 w-40 rounded-lg object-cover object-center"
+              src={image}
+            />
+          </div>
+        ))}
+      </div>
+    </>
+  )}
+</div>

@@ -1,0 +1,15 @@
+---
+const { active } = Astro.props
+
+const links = [
+  { label: 'Home', url: '/' },
+  { label: 'Projects', url: '/' },
+  { label: 'Blog', url: '/blog' },
+  { label: 'Gallery', url: '/gallery' }
+]
+---
+{links.map((link) => (
+  <a href={link.url} class={`transition-colors hover:text-white ${link.label === active ? 'text-white' : ''}`}>
+    {link.label}
+  </a>
+))}
