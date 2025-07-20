@@ -9,6 +9,7 @@
 
 @theme{
   --color-midnight-black : #191919;
+  --color-brown: #786b5e;
   --font-modern : "Cinzel" , serif;
   --font-galaxy : "DistantGalaxy";
 }
@@ -21,7 +22,7 @@
 }
 
 .triangle{
-  @apply w-0 h-0 border-l-[0.4em] border-y-[0.3em] border-y-transparent border-solid
+  @apply w-0 h-0 border-l-[0.3em] border-y-[0.2em] border-y-transparent border-solid
 }
 .box{
   @apply sm:w-1/2 w-3/5 p-1 h-10 bg-neutral-800 mx-auto text-zinc-300 sm:text-2xl text-center rounded-md font-extrabold font-galaxy
@@ -64,10 +65,6 @@ section {
       opacity: 1;
     }
   }
-.halftone {
-  background: radial-gradient(circle at center, #191919 0.25rem, transparent 0);
-}
-.gradient{
-  background: #8e9490;
-  background: linear-gradient(90deg,rgba(142, 148, 144, 1) 0%, rgba(25, 25, 25, 1) 0%, rgba(45, 45, 45, 1) 19%, rgba(130, 130, 130, 1) 49%, rgba(25, 25, 25, 1) 85%);
+div.header-nav-item--active>a {
+    color: white !important;
 }
