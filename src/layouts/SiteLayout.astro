@@ -4,6 +4,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import MastHead from '../components/MastHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Firefly from '../components/Firefly.astro';
 const { name } = Astro.props;
 ---
 <!doctype html>
@@ -12,10 +13,12 @@ const { name } = Astro.props;
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body class="bg-midnight-black">
-		<Header />
+		<Firefly/>
 		<main>
-			<MastHead title={name}/>
+            <Header/>
+            <MastHead title={name}/>
             <slot/>
+			
 		</main>
 		<Footer/>
 	</body>

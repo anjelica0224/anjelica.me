@@ -6,8 +6,11 @@ import Projects from '../components/projects.astro';
 import SiteLayout from '../layouts/SiteLayout.astro';
 ---
 <SiteLayout name="Anjelica">
-	<About/>
-	<Intro/>
-	<Experience/>
-	<Projects/>
+	<div class="overflow-y-scroll max-h-screen">
+
+		<About/>
+		<Intro/>
+		<Experience/>
+		<Projects/>
+	</div>
 </SiteLayout>

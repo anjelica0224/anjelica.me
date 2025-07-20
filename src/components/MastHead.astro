@@ -2,13 +2,62 @@
 const { title } = Astro.props;
 ---
 
-<section class="w-full-screen h-60 md:h-90 relative z-0">
-    <img class="w-full h-40 md:h-60 object-cover z-0" src="/header-image.jpeg"/>
-    <div class="flex flex-col w-1/2 mx-auto absolute z-10 inset-x-1/5 inset-y-2/5">
+<section class="relative h-60 md:h-90 w-full overflow-hidden">
+  <div class="absolute inset-0">
+    <img class="w-full h-40 md:h-65 object-cover backdrop-opacity-55 -z-20" src="/header-image.jpeg"/>
+    <div class="absolute inset-0"></div>
+  </div>
+
+   <div class="flex flex-col w-1/2 mx-auto absolute z-50 inset-x-1/5 inset-y-2/5">
         <div class="flex flex-col items-center w-max">
             <img class="rounded-full md:size-[150px] size-[90px]" src="/anjelica.jpeg">
             <span class="font-modern text-amber-50 text-2xl md:text-3xl text-center pt-3">{title}</span>
         </div>
     </div>
-    
+
+  <div class="waves inset-y-2/5 -z-40">
+    <svg
+      class="waves-svg"
+      viewBox="0 24 150 28"
+      preserveAspectRatio="none"
+      shape-rendering="auto"
+    >
+      <defs>
+        <path
+          id="gentle-wave"
+          d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+        />
+      </defs>
+      <g class="parallax">
+        <use
+          href="#gentle-wave"
+          x="48"
+          y="0"
+          class="wave-layer opacity-25"
+          style="animation-delay: -2s; animation-duration: 7s;"
+        />
+        <use
+          href="#gentle-wave"
+          x="48"
+          y="20"
+          class="wave-layer opacity-50"
+          style="animation-delay: -3s; animation-duration: 10s;"
+        />
+        <use
+          href="#gentle-wave"
+          x="48"
+          y="5"
+          class="wave-layer opacity-75"
+          style="animation-delay: -4s; animation-duration: 13s;"
+        />
+        <use
+          href="#gentle-wave"
+          x="48"
+          y="7"
+          class="wave-layer"
+          style="animation-delay: -5s; animation-duration: 20s;"
+        />
+      </g>
+    </svg>
+  </div>
 </section>

@@ -29,3 +29,45 @@
 .line{
   @apply border-neutral-800 sm:w-1/2 w-3/5 mx-auto mb-4
 }
+.waves {
+    @apply absolute bottom-0 left-0 w-full h-[15vh] min-h-[50px] max-h-[150px] z-20;
+  }
+
+  .waves-svg {
+    @apply relative h-full w-full;
+  }
+
+  .wave-layer {
+    fill: #191919;
+    animation: wave 25s cubic-bezier(0.5, 0.5, 0.45, 0.5) infinite;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+      transform: translate3d(85px, 0, 0);
+    }
+  }
+
+  /* Optional: Add some fade-in animation */
+section {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+.halftone {
+  background: radial-gradient(circle at center, #191919 0.25rem, transparent 0);
+}
+.gradient{
+  background: #8e9490;
+  background: linear-gradient(90deg,rgba(142, 148, 144, 1) 0%, rgba(25, 25, 25, 1) 0%, rgba(45, 45, 45, 1) 19%, rgba(130, 130, 130, 1) 49%, rgba(25, 25, 25, 1) 85%);
+}
