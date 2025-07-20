@@ -1,0 +1,98 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro'; 
+import FormattedDate from '../components/FormattedDate.astro';
+import Menu from '../components/Menu.astro';
+import { list } from '../components/Intro.astro';
+import { getCollection} from 'astro:content';
+const bookshelf = await getCollection('books');
+const random = await getCollection('notes');
+
+const snapshots = [
+    {url: '/src/assets/snap/snap-11.webp', text: '2022-01-01'},
+    {url: '/src/assets/snap/snap22.webp', text: '2022'},
+    {url: '/src/assets/snap/snap33.webp', text: '2022'},
+    {url: '/src/assets/snap/snap44.webp', text: '2022'},
+    {url: '/src/assets/snap/snap-1.webp', text: '2022'},
+    {url: '/src/assets/snap/snap-2.webp', text: '2022'},
+]
+---
+<SiteLayout headerImage="header-image.webp" pfp="anjelica.webp">
+    <div class="sm:grid sm:grid-cols-4 gap-4">
+        <aside class="sm:w-3/5 hidden md:flex md:flex-col left-4" >
+            <div class="mt-20 mb-40 flex gap-6 flex-col text-center text-neutral-500 text-lg font-galaxy mx-auto">
+                <Menu active="Gallery"/>
+            </div>
+            <!-- <div class="grow"></div> -->
+            <img src="/up.webp" class="scale-280 ml-18 ">
+            <img src="/all.webp" class="scale-280 mt-20 mb-20 ml-20"/>
+            <img src="/aya.webp" class="rounded-2xl ml-16 mt-20 scale-150"/>
+
+            <!-- <div class="grow"></div> -->
+            <!-- <img src="/castle3.webp" class="scale-y-120 scale-x-180"/> -->
+        </aside>
+        <section class="overflow-y-hidden sm:col-span-2 md:p-0 sm:p-0 p-20 mb-40">    
+            <div>
+                <div class="text-neutral-300 sm:w-1/2 w-3/5 text-lg sm:text-2xl font-galaxy font-extrabold">smth about me</div>
+                <hr class="line absolute my-2"/>
+                <div class="my-6 text-neutral-400 font-galaxy">
+                    {list.map((line) => (
+                        <p class="p-2 tracking-wider">{line}</p>
+                    ))}
+                </div>
+            </div>
+            <div>
+                <span class=" text-neutral-300 text-md font-galaxy">Snapshots</span>
+                <hr class="line absolute my-2"/>
+                <div class="flex mt-4 gap-4">
+                    <div class="grid mx-auto my-6 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        {snapshots.map((snap) => (
+                            <img src={snap.url} alt={snap.text} class="w-60 h-40 object-cover"/>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2">
+                <div>
+                    <span class=" text-neutral-300 text-md font-galaxy underline-offset-4 italic underline">books that i could read all over again</span>
+                    <ul class="list-none list-inside p-4 font-galaxy text-neutral-400 text-sm">
+                        {bookshelf.map((one)=>(
+                            <li class="my-2 italic">{one.data.title}</li>
+                        ))}
+                    </ul>
+                </div>
+                <div>
+                    <span class=" text-neutral-300 text-md font-galaxy underline-offset-4 italic underline">black holes & other things</span>
+                    <ul class="list-none list-inside p-4 font-galaxy text-neutral-400 text-sm">
+                        <li class="my-2"><a href="/blog/black_holes_1/" class="italic hover:text-white transition-colors">black holes pt.1</a></li>
+                        <li class="my-2"><a href="/blog/black_holes_2/" class="italic hover:text-white transition-colors">black holes pt.2</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid grid-cols-4 gap-4">
+                <span class=" text-neutral-300 text-md col-span-4 font-galaxy underline-offset-4 italic underline">scribbles</span>
+                {random.map((note)=>(
+                    <div class="text-neutral-400 hover:bg-midnight-black transition-colors flex flex-col gap-4 font-galaxy bg-brown mt-6 p-4 text-xs">
+                        <p>{note.data.body}</p>
+                        <span class="text-[10px] italic">{note.data.author}</span>
+                    </div>
+                    
+                ))}    
+            </div>
+        </section>
+
+        <aside class="mt-20 sm:w-4/5 hidden md:flex md:flex-col" >
+            <a target="_blank" href="https://open.spotify.com/embed/playlist/2Fs3o6pdlz1pjbDoanvdnL?utm_source=generator&theme=0"><img src="/jess.webp" class=" mb-10 p-4 rounded-4xl"/></a>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6s8PRmROPJHlqZmu9Bbviz?utm_source=generator" width="95%" height="200" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <div class="grow"></div>
+        </aside>
+    
+  </div>
+
+
+
+	
+
+	
+	<hr class="line mt-4">
+	
+</SiteLayout>
