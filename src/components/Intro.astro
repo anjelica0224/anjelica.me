@@ -1,17 +1,22 @@
 ---
-const list = [
+export const list = [
     "The fragments of my inclinations and interests are scattered all over the place.",
     "I love to read-Virginia Woolf, Jane Austen, Ayn Rand, Sylvia Plath and many more authors wreck my headspace in a naive way. and obviously, on days I feel like screaming at the sky, I write as well.",
     " I'm a little bit into aerospace, math, astronomy, Stephen hawking and who isn't fascinated by black holes! I love exploring the world of tech, gauging my interests and trying to learn as much as I can while remaining weary of my presence in the cyberworld, thanks to Snowden.",
     ""
 ]
 
+const list2 = [
+    "I'm an undergrad student at Plaksha University, majoring in Computer Science & Artificial Intelligence.", 
+    "My current work includes research under Prof. Siddharth at the intersection of productivity, machine learning, and AI.",
+    "I'm an avid learner. I love building things, writing, reading and exploring.",
+]
+
 ---
-<section class="text-neutral-300 font-galaxy mt-2 md:mt-8 mx-auto prose pt-4 max-w-3/5 sm:max-w-1/2">
-    <span class="sm:text-2xl mb-4">About me</span>
-    {list.map((item) =>
-        <div class="flex gap-2 mt-2 mb-4">
-            <div class="tracking-wider text-[12px] sm:text-[16px]">{item}</div>
-        </div>  
+<section class="text-neutral-400 font-serif mt-2 md:mt-8 mx-auto prose pt-4 max-w-3/5 sm:max-w-1/2">
+    {list2.map((item) =>
+        <ul class="flex gap-2 mt-2 mb-4">
+            <div class=" text-[12px] sm:text-[16px]">{item}</div>
+        </ul>  
     )}
 </section>
