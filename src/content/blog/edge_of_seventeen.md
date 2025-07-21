@@ -2,8 +2,8 @@
 title: 'The edge of seventeen'
 description: 'The crumpled bedsheet, the not so warm blanket In a room that screams at you   '
 pubDate: 'May 25 2024'
-heroImage: '/src/assets/posts/edge.webp'
-otherImages: ['/src/assets/posts/edge.webp']
+heroImage: '/assets/posts/edge.webp'
+otherImages: ['/assets/posts/edge.webp']
 layout: [2,3]
 ---
 

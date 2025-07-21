@@ -2,9 +2,9 @@
 title: 'nothing nevermind'
 description: I've got words to say that i never do
 pubDate: 'January 25 2025'
-heroImage: '/src/assets/posts/nothing.webp'
-otherImages: ['/src/assets/posts/nothing.webp', '/src/assets/posts/nothingflowers.webp', '/src/assets/posts/nothingjessm.webp']
-rightImages: ['/src/assets/posts/nothinginf.webp', '/src/assets/posts/nothingjess.webp', '/src/assets/posts/nothingf.webp']
+heroImage: '/assets/posts/nothing.webp'
+otherImages: ['/assets/posts/nothing.webp', '/assets/posts/nothingflowers.webp', '/assets/posts/nothingjessm.webp']
+rightImages: ['/assets/posts/nothinginf.webp', '/assets/posts/nothingjess.webp', '/assets/posts/nothingf.webp']
 layout: [2,2]
 ---
 

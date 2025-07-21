@@ -8,15 +8,15 @@ const bookshelf = await getCollection('books');
 const random = await getCollection('notes');
 
 const snapshots = [
-    {url: '/src/assets/snap/snap-11.webp', text: '2022-01-01'},
-    {url: '/src/assets/snap/snap22.webp', text: '2022'},
-    {url: '/src/assets/snap/snap33.webp', text: '2022'},
-    {url: '/src/assets/snap/snap44.webp', text: '2022'},
-    {url: '/src/assets/snap/snap-1.webp', text: '2022'},
-    {url: '/src/assets/snap/snap-2.webp', text: '2022'},
+    {url: '/assets/snap/snap-11.webp', text: '2022-01-01'},
+    {url: '/assets/snap/snap22.webp', text: '2022'},
+    {url: '/assets/snap/snap33.webp', text: '2022'},
+    {url: '/assets/snap/snap44.webp', text: '2022'},
+    {url: '/assets/snap/snap-1.webp', text: '2022'},
+    {url: '/assets/snap/snap-2.webp', text: '2022'},
 ]
 ---
-<SiteLayout headerImage="header-image.webp" pfp="anjelica.webp">
+<SiteLayout headerImage="/header-image.webp" pfp="/anjelica.webp">
     <div class="sm:grid sm:grid-cols-4 gap-4">
         <aside class="sm:w-3/5 hidden md:flex md:flex-col left-4" >
             <div class="mt-20 mb-40 flex gap-6 flex-col text-center text-neutral-500 text-lg font-galaxy mx-auto">

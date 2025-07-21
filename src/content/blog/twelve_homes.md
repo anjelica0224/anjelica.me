@@ -2,9 +2,9 @@
 title: 'twelve homes & blue skies'
 description: 'Reckless, restless, these four walls that have consumed me, throughout  '
 pubDate: 'June 06 2024'
-heroImage: '/src/assets/posts/twelve2.webp'
-otherImages: ['/src/assets/posts/twelve1.webp', '/src/assets/posts/twelve2.webp']
-rightImages: ['/src/assets/posts/twelve3.webp', '/src/assets/posts/twelve4.webp']
+heroImage: '/assets/posts/twelve2.webp'
+otherImages: ['/assets/posts/twelve1.webp', '/assets/posts/twelve2.webp']
+rightImages: ['/assets/posts/twelve3.webp', '/assets/posts/twelve4.webp']
 layout: [2,2]
 ---
 

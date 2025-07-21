@@ -2,9 +2,9 @@
 title: 'screen'
 description: 'trying to fill the void, with the same songs on repeat, the dust on my shelves, like rust on my messed up self. i broke my phone, again, shit.'
 pubDate: 'August 26 2024'
-heroImage: '/src/assets/posts/screen5.webp'
-otherImages: ['/src/assets/posts/screen1.webp', '/src/assets/posts/screen2.webp', '/src/assets/posts/screen3.webp', ]
-rightImages: ['/src/assets/posts/screen4.webp', '/src/assets/posts/screen5.webp']
+heroImage: '/assets/posts/screen5.webp'
+otherImages: ['/assets/posts/screen1.webp', '/assets/posts/screen2.webp', '/assets/posts/screen3.webp', ]
+rightImages: ['/assets/posts/screen4.webp', '/assets/posts/screen5.webp']
 layout: [2,3]
 ---
 

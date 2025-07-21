@@ -2,9 +2,9 @@
 title: 'unconventional me'
 description: 'if i could record all the thoughts that play through my head, the way my eyes scan the horde of people around, the myriad strings of my made-up playlists with fabricated characters woven into the lyrics. piling up the stack of songs that keep hovering over my lens.'
 pubDate: 'June 26 2024'
-heroImage: '/src/assets/unconventional_me.webp'
-otherImages: [ '/src/assets/unconventional_me.webp', '/src/assets/posts/unconventional_me.webp', '/src/assets/posts/unc.webp']
-rightImages: ['/src/assets/posts/unc2.webp', '/src/assets/posts/unc3.webp', '/src/assets/posts/unc4.webp']
+heroImage: '/assets/unconventional_me.webp'
+otherImages: [ '/assets/unconventional_me.webp', '/assets/posts/unconventional_me.webp', '/assets/posts/unc.webp']
+rightImages: ['/assets/posts/unc2.webp', '/assets/posts/unc3.webp', '/assets/posts/unc4.webp']
 layout: [2, 2]
 ---
 

@@ -2,8 +2,8 @@
 title: 'black holes pt.1'
 description: 'They say home is where your heart is, and mine lies among the stars, across the universe.'
 pubDate: 'April 12 2024'
-heroImage: '/src/assets/posts/black-hole.webp'
-otherImages: ['/src/assets/posts/black-hole.webp', '/src/assets/posts/black-hole-2.webp']
+heroImage: '/assets/posts/black-hole.webp'
+otherImages: ['/assets/posts/black-hole.webp', '/assets/posts/black-hole-2.webp']
 layout: [2,3]
 ---
 

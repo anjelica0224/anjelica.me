@@ -2,9 +2,9 @@
 title: 'a delusion of home'
 description: i'm afraid i'll never fit into the framed silhoutte of the false paragons you desire 
 pubDate: 'August 01 2024'
-heroImage: '/src/assets/posts/delusiontry.webp'
-otherImages: ['/src/assets/posts/delusiontry.webp', /src/assets/posts/delusiong.webp]
-rightImages: ['/src/assets/posts/delusiong2.webp']
+heroImage: '/assets/posts/delusiontry.webp'
+otherImages: ['/assets/posts/delusiontry.webp', /assets/posts/delusiong.webp]
+rightImages: ['/assets/posts/delusiong2.webp']
 layout: [2,3]
 ---
 

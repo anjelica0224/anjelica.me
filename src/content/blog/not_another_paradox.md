@@ -2,8 +2,8 @@
 title: 'not another paradox'
 description: 'what if my head is a dystopic painting of the usual blacks and grays'
 pubDate: 'Jul 30 2024'
-heroImage: '/src/assets/posts/paradox.webp'
-otherImages: ['/src/assets/posts/paradox.webp']
+heroImage: '/assets/posts/paradox.webp'
+otherImages: ['/assets/posts/paradox.webp']
 layout: [2,2]
 ---
 

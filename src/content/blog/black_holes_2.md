@@ -2,8 +2,8 @@
 title: 'black holes pt.2'
 description: 'Stars are formed when large giant clouds of gases (mainly hydrogen) collapse on themselves when gravitational attraction pulls them inward, causing them to'
 pubDate: 'April 12 2024'
-heroImage: '/src/assets/posts/black-hole.webp'
-otherImages: ['/src/assets/posts/black-hole.webp', '/src/assets/posts/black-hole-2.webp']
+heroImage: '/assets/posts/black-hole.webp'
+otherImages: ['/assets/posts/black-hole.webp', '/assets/posts/black-hole-2.webp']
 layout: [2,3]
 ---
 

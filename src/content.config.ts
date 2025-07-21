@@ -40,7 +40,7 @@ const projects = defineCollection({
 })
 
 const blog = defineCollection({
-	loader: glob({ base: './src/content/blog', pattern: '**/*.{md,mdx}' }),
+	loader: glob({ base: 'src/content/blog', pattern: '**/*.{md,mdx}' }),
 	schema: ({ image }) => z.object({
 		title: z.string(),
 		description: z.string(),

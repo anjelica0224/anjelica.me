@@ -2,9 +2,9 @@
 title: 'In a nutshell'
 description: 'In the company of shadows i see my reflection in the shattered pieces of the mirror lying across the floor'
 pubDate: 'May 25 2024'
-heroImage: '/src/assets/posts/nutshell1.webp'
-otherImages: ['/src/assets/posts/nutshell1.webp', '/src/assets/posts/nutshell2.webp']
-rightImages: ['/src/assets/posts/nutshell3.webp']
+heroImage: '/assets/posts/nutshell1.webp'
+otherImages: ['/assets/posts/nutshell1.webp', '/assets/posts/nutshell2.webp']
+rightImages: ['/assets/posts/nutshell3.webp']
 layout: [2,3]
 ---
 
