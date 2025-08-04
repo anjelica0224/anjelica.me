@@ -8,8 +8,8 @@ type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate, updatedDate, heroImage, otherImages, rightImages, layout } = Astro.props;
 ---
 <SiteLayout headerImage={heroImage}>
-  <div class="grid grid-cols-4 gap-4">
-    <aside class="sm:w-3/5 hidden md:flex md:flex-col left-4" >
+  <div class="sm:grid sm:grid-cols-4 gap-4">
+    <aside class="md:w-3/5 hidden md:flex md:flex-col left-4" >
       <div class="mt-20 mb-40 flex gap-6 flex-col text-center text-neutral-500 text-lg font-galaxy mx-auto">
         <Menu active="Blog"/>
       </div>
@@ -17,7 +17,7 @@ const { title, description, pubDate, updatedDate, heroImage, otherImages, rightI
       <img src="/all.webp" class="scale-280 mt-20 mb-20 ml-20"/>
       <img src="/aya.webp" class="rounded-2xl ml-16 mt-20 scale-150"/>
     </aside>
-    <article class="overflow-y-hidden col-span-2 mb-40">
+    <article class="md:col-span-2 col-span-4 px-20 md:p-0 mb-40">
       <span class="text-neutral-300 md:text-4xl font-galaxy font-extrabold text-2xl">{title}</span>
       <div class="mt-8">
         <slot/>

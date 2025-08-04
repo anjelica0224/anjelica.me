@@ -21,7 +21,7 @@ const listPosts = posts.filter(post => !gridPostTitles.includes(post.data.title)
 ---
 <SiteLayout headerImage="/header-image.webp" pfp="/anjelica.webp">
 	<div class="sm:grid sm:grid-cols-4">
-		<aside class="sm:w-4/5 hidden md:flex md:flex-col left-4" >
+		<aside class="sm:w-4/5 hidden sm:flex sm:flex-col left-4" >
 			<div class="mt-30 flex h-screen flex-col gap-4 text-center text-neutral-500 text-lg font-galaxy mx-auto">
 				<Menu active="Blog"/>
 				<div class="text-xs tracking-widest mt-6 bg-neutral-800 p-4 ml-10 hover:bg-neutral-700 transition-colors hover:text-white">
@@ -32,11 +32,11 @@ const listPosts = posts.filter(post => !gridPostTitles.includes(post.data.title)
 				</div>
 				<h2 class="text-neutral-300 mt-6 text-center mx-auto text-[8px] sm:text-xs italic font-mono font-extralight">a raging dysphoria</h1>
 				<div class=" text-neutral-500 font-galaxy text-xs mx-auto w-10/12 text-center">onism that burns</div>
-				<img src="/jo.webp" class="mt-8 mb-6 rounded-4xl scale-85 opacity-65">
+				<img src="/jo.webp" class="mt-8 mb-6 rounded-4xl scale-85 opacity-65"/>
 			</div>
 		</aside>
 
-		<div class="sm:col-span-2 p-20 sm:p-0">
+		<div class="sm:col-span-2 px-20 sm:pr-8 sm:pl-6 md:p-0">
 			<section class="">
 				<h1 class="text-neutral-300 text-center mx-auto text-lg sm:text-2xl font-galaxy font-extrabold">my fabricated nutshell</h1>
 				<h2 class="text-neutral-300 mt-6 text-center mx-auto text-[8px] sm:text-xs italic font-mono font-extralight">my head is a hive of words that won't settle down.</h1>
@@ -66,7 +66,7 @@ const listPosts = posts.filter(post => !gridPostTitles.includes(post.data.title)
 					<div class="flex flex-col items-start">
 						{posts.map((post) => (
 							<div class="overflow-hidden flex flex-col mt-4">
-								<div class="flex items-center tracking-wider gap-4">
+								<div class="flex flex-col sm:flex-row sm:items-center gap-2 mb-2 sm:tracking-wider  sm:gap-4">
 									<a href={`/blog/${post.id}/`} class="">
 										<span class="text-neutral-300 transition-colors hover:text-white text-md font-bold font-galaxy">{post.data.title}</span>
 									</a>
@@ -81,7 +81,7 @@ const listPosts = posts.filter(post => !gridPostTitles.includes(post.data.title)
 			<hr class="line absolute mb-4">
 		</div>
 
-		<aside class="sm:w-1/5 hidden md:flex md:flex-col absolute p-8 gap-20 right-6 " >
+		<aside class="sm:w-1/5 hidden sm:flex sm:flex-col absolute p-8 gap-20 right-6 " >
 			<img src="/s.webp" class="opacity-70 scale-120 mt-16"/>
 			<img src="/rocket.webp" class="mt-auto"/>	
 			<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4dq4dE9TLg5ifEgpWxTlVS?utm_source=generator" width="110%" height="150" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
