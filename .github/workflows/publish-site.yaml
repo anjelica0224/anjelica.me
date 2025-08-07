@@ -1,7 +1,15 @@
-on: [push]
+name: Publish Site
+
+on:
+  push:
+    branches:
+      - main
 jobs: 
     publish:
         runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            deployments: write
         steps:
             - name: Checkout
               uses: actions/checkout@v3
