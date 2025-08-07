@@ -1,15 +1,15 @@
 - company:
-  id: Agmitra Technologies
-  role: Software Intern
-  time: May 2025 - June 2025
-  job: Worked on optimization polarimeter algorithms for DigiSugar in R&D  and hosted/enhanced the React/Express/MongoDB website by adding new features.
-  url: https://www.agmitra.co.in/
-- company:
   id: LEAP - AI@Plaksha
   role: Member
   time: January 2025 - Present
   job: Built the backend, using FastAPI and MongoDB for a game where user enters emojis and the AI guesses the movie for the Foundation Day Project.
   url: https://github.com/anjelica0224/FastAPI/
+- company:
+  id: Agmitra Technologies
+  role: Software Intern
+  time: May 2025 - June 2025
+  job: Worked on optimization polarimeter algorithms for DigiSugar in R&D  and hosted/enhanced the React/Express/MongoDB website by adding new features.
+  url: https://www.agmitra.co.in/
 - company:
   id: Dixon IoT Lab, Plaksha University
   role: ML Intern
