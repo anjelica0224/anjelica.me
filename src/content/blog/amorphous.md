@@ -2,9 +2,9 @@
 title: 'amorphously misunderstood'
 description: I think most people are monsters, but she was a menace-
 pubDate: 'October 18 2025'
-heroImage: '/assets/posts/delusiontry.webp'
-otherImages: ['/assets/posts/delusiontry.webp', /assets/posts/delusiong.webp]
-rightImages: ['/assets/posts/delusiong2.webp']
+heroImage: '/assets/posts/twelve1.webp' 
+otherImages: ['/assets/posts/delusiontry.webp', '/assets/posts/amorphous/exile.webp']
+rightImages: ['/assets/posts/amorphous/like.webp', '/assets/posts/amorphous/lose.webp']
 layout: [2,3]
 ---
 
