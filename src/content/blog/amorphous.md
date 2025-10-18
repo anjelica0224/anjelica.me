@@ -15,8 +15,8 @@ the kind I’d write about a million times but still want more.
 Kohl-lined eyes drifting across the pages of *Mansfield park*,      
 stifling the echoes of Esther’s voices into the bell jar of her heart’s backyard.       
 Said she’d died a thousand times so the void doesn’t feel heavy anymore     
-rose up from the ashes, to only go back to feeling sore
-her hesitant, whimsical laughs 
+rose up from the ashes, to only go back to feeling sore     
+her hesitant, whimsical laughs      
 tainted with sunlight caught on the edges of her fingers        
 as they rose to hide her face, braids that subtly forced you to speak with grace    
 about how people are not monsters but a reflection of their hazy thoughts-      
