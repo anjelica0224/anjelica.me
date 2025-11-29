@@ -18,3 +18,8 @@
   excerpt: Crowd-sourced language learning application.
   tech: [Typescript, React.js, Prisma, MongoDB, RESTFul Apis]
   url: https://github.com/freeCodeCamp-2025-Summer-Hackathon/rose-token
+- celestia:
+  id: Celestia
+  excerpt: A celestial event tracker mobile application.
+  tech: [React Native, Expo, NativeWind, NASA Image and Video Library API]
+  url: https://github.com/anjelica0224/celestia
