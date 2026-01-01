@@ -8,18 +8,18 @@
   excerpt: Multi-modal emotion recognition in Code-Mixed(Hinglish) sarcastic utterances.
   tech: [ Python, Random Forest, Neural network]
   url: https://github.com/IshitaR0/EmotionsInOurSarcasm
-- subsad:
-  id: SubsAd
-  excerpt: Platform for substitute teachers in schools. (work in progress)
-  tech: [React.js, MongoDB, Clerk, Express.js]
-  url: https://github.com/anjelica0224/SubsAd
-- langlantern:
-  id: LangLantern
-  excerpt: Crowd-sourced language learning application.
-  tech: [Typescript, React.js, Prisma, MongoDB, RESTFul Apis]
-  url: https://github.com/freeCodeCamp-2025-Summer-Hackathon/rose-token
 - celestia:
   id: Celestia
   excerpt: A celestial event tracker mobile application.
   tech: [React Native, Expo, NativeWind, NASA Image and Video Library API]
   url: https://github.com/anjelica0224/celestia
+- langlantern:
+  id: LangLantern
+  excerpt: Crowd-sourced language learning application.
+  tech: [Typescript, React.js, Prisma, MongoDB, RESTFul Apis]
+  url: https://github.com/freeCodeCamp-2025-Summer-Hackathon/rose-token
+- subsad:
+  id: SubsAd
+  excerpt: Platform for substitute teachers in schools. (work in progress)
+  tech: [React.js, MongoDB, Clerk, Express.js]
+  url: https://github.com/anjelica0224/SubsAd
