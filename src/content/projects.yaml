@@ -18,6 +18,11 @@
   excerpt: Crowd-sourced language learning application.
   tech: [Typescript, React.js, Prisma, MongoDB, RESTFul Apis]
   url: https://github.com/freeCodeCamp-2025-Summer-Hackathon/rose-token
+- navbot:
+  id: NavBot
+  excerpt: A chat-widget that acts like a navigation assistant that reads websites + answers questions(work in progress).
+  tech: [React, Typescript, turborepo, TailwindCSS, Langchain]
+  url: https://github.com/cherie-dips/NavBot
 - subsad:
   id: SubsAd
   excerpt: Platform for substitute teachers in schools. (work in progress)
