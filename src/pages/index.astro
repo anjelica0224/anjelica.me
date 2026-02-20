@@ -1,15 +1,22 @@
 ---
+import HomeLayout from '../layouts/HomeLayout.astro';
+import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
-import Intro from '../components/Intro.astro';
 import Experience from '../components/Experience.astro';
 import Projects from '../components/projects.astro';
-import SiteLayout from '../layouts/SiteLayout.astro';
 ---
-<SiteLayout name="Anjelica" headerImage="/header-image.webp" pfp="/anjelica.webp">
-	<div>
-		<About/>
-		<Intro/>
-		<Experience/>
-		<Projects/>
-	</div>
-</SiteLayout>
+<HomeLayout>
+  <Hero />
+  <About />
+  <Experience />
+  <Projects />
+</HomeLayout>
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    }),
+    { threshold: 0.1 }
+  );
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>

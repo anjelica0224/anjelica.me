@@ -1,31 +1,64 @@
 ---
-import { getCollection} from 'astro:content';
-const allProjects = await getCollection('projects');
+import { getCollection } from 'astro:content';
+const projects = await getCollection('projects');
 ---
 
-<section id="projects" class="mt-8">
-    <div class="box">PROJECTS</div>
-    <blockquote class="p-2 my-4 mb-6 b w-1/2 mx-auto">
-        <p class="font-galaxy italic leading-relaxed text-neutral-300 text-sm ">
-            Exploring, building and learning along the way &lt;3
-        </p>
-    </blockquote>
-    <div class="flex flex-wrap w-3/5 mt-4 gap-4 mx-auto sm:w-1/2">
-        {allProjects.map(one => (
-            <a href={one.data.url} target="_blank">
-                <div class="flex flex-col flex-wrap p-4 rounded-2xl w-4/5 sm:w-50 bg-neutral-900 hover:bg-neutral-800">
-                    <span class="font-galaxy text-neutral-300 sm:text-lg text-sm font-extrabold">{one.data.id}</span>
-                    <p class="mt-2 font-extralight text-neutral-300 text-xs sm:text-sm">{one.data.excerpt}</p>
-                    <div class="flex rounded mt-2 flex-wrap">
-                        {(one.data.tech).map(label => (
-                            <span class=" mt-2 text-neutral-300 text-[10px] bg-neutral-800 mr-2 p-1 rounded-sm">{label}</span>
-                        ))}
-                    </div>
-                
-                </div>
-            </a>
-            
-        ))}
+<section id="projects" class="px-6 sm:px-10 py-28 border-t border-dust">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 mb-16 fade-up">
+      <div>
+        <span class="sec-tag">— Selected Works</span>
+        <em class="block font-body italic text-xl text-cream/70 mb-3">things I've made</em>
+        <h2
+          class="font-display font-light text-fog leading-[0.92] tracking-tight"
+          style="font-size: clamp(2.75rem, 5.5vw, 4.5rem);"
+        >
+          Projects<br><span class="text-parchment">&amp; Work</span>
+        </h2>
+      </div>
+      <p class="font-body italic text-base text-ash sm:text-right sm:max-w-[24ch] leading-relaxed">
+        exploring, building, and learning along the way ♡
+      </p>
     </div>
-    <hr class="line mt-8 ">
+
+    <div class="flex flex-col fade-up" style="transition-delay:0.1s">
+      {projects.map((proj, i) => (
+        
+        <a href={proj.data.url} target="_blank"
+          class="group relative grid grid-cols-[2.5rem_1fr] sm:grid-cols-[3rem_1fr_180px] items-center gap-4 sm:gap-6 py-7 border-t border-dust last:border-b hover:bg-vellum transition-colors duration-300 no-underline px-2"
+        >
+          <span class="font-galaxy text-[0.5rem] tracking-[0.2em] text-ash group-hover:text-parchment transition-colors duration-300">
+            {String(i + 1).padStart(2, '0')}
+          </span>
+
+          <div>
+            <span
+              class="font-display font-light text-fog group-hover:text-cream transition-colors duration-300 block mb-1.5 tracking-wide"
+              style="font-size: clamp(1.2rem, 2.2vw, 1.65rem);"
+            >
+              {proj.data.id}
+            </span>
+            <p class="font-body italic text-base text-cream/60 leading-snug">{proj.data.excerpt}</p>
+          </div>
+
+          <div class="hidden sm:flex flex-col items-end gap-1.5">
+            {proj.data.tech.map(tag => (
+              <span class="font-galaxy text-[0.45rem] tracking-[0.12em] uppercase text-ash border border-dust group-hover:border-ash group-hover:text-cream/70 transition-all duration-200 px-2 py-0.5">
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <div class="absolute right-2 top-1/2 -translate-y-1/2 text-dust group-hover:text-parchment group-hover:translate-x-0.5 group-hover:-translate-y-[calc(50%+2px)] transition-all duration-300">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <line x1="7" y1="17" x2="17" y2="7"/>
+              <polyline points="7 7 17 7 17 17"/>
+            </svg>
+          </div>
+        </a>
+      ))}
+    </div>
+
+  </div>
 </section>

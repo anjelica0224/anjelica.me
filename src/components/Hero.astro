@@ -1,0 +1,54 @@
+---
+import MastHead from './MastHead.astro';
+---
+
+<MastHead header="/header-image.webp" profile="/anjelica.webp" />
+<section class="px-6 sm:px-10 py-12">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10 items-end">
+    <div>
+      <em class="block font-body italic text-lg sm:text-xl text-ash mb-3 opacity-0 animate-[heroIn_0.8s_ease_0.1s_forwards]">
+        a private library —
+      </em>
+      <h1
+        class="font-display font-light text-fog leading-[0.9] whitespace-nowrap opacity-0 animate-[heroIn_0.8s_ease_0.2s_forwards]"
+        style="font-size: clamp(3.75rem, 9vw, 7.5rem); letter-spacing: -0.01em;"
+      >
+        Anjelica<span class="text-parchment"> —</span>
+      </h1>
+    </div>
+
+    <div class="hidden sm:flex flex-col items-end gap-8 pb-1">
+      <p class="font-body italic text-right text-cream/80 leading-relaxed max-w-[30ch] opacity-0 animate-[heroIn_0.8s_ease_0.45s_forwards]"
+         style="font-size: clamp(1rem, 1.6vw, 1.15rem);">
+        out of chaos, <em class="text-parchment not-italic">emerges</em> something worth reading.<br>
+        building things that help people pay attention<br>to what actually matters.
+      </p>
+      <span class="font-galaxy text-[0.5rem] tracking-[0.28em] uppercase text-ash flex items-center gap-2.5 opacity-0 animate-[heroIn_0.8s_ease_0.65s_forwards]">
+        <span class="block w-6 h-px bg-ash/50"></span>
+        scroll to explore
+      </span>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-inner">
+    {[
+      'Virginia Woolf','Black Holes & Relativity','Sylvia Plath',
+      'Artificial Intelligence','Ayn Rand','Privacy & Technology',
+      'Jane Austen','Aerospace & Astronomy','Edward Snowden',
+      'Virginia Woolf','Black Holes & Relativity','Sylvia Plath',
+      'Artificial Intelligence','Ayn Rand','Privacy & Technology',
+      'Jane Austen','Aerospace & Astronomy','Edward Snowden',
+    ].map(item => (
+      <span class="marquee-item">{item}<span class="marquee-dot"></span></span>
+    ))}
+  </div>
+</div>
+
+<style>
+  @keyframes heroIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>

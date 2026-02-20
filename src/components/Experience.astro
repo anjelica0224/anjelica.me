@@ -1,32 +1,56 @@
 ---
-import { getCollection, getEntry } from 'astro:content';
-const allExperiences = await getCollection('experiences');
+import { getCollection } from 'astro:content';
+const experiences = await getCollection('experiences');
 ---
 
-<section class="">
-    <div class="box">EXPERIENCES</div>
-    <div class="flex mt-4 mx-auto sm:w-1/2 w-1/2">
-        <div class="flex flex-col">
-            {allExperiences.map(one => (
-                <div class="flex  tracking-widest">
-                    <div class="flex flex-col items-center">
-                        <div class="mt-2 w-2 h-2 rounded-full bg-neutral-400"></div>
-                        <div class=" h-full bg-neutral-800 w-0.5"></div>
-                    </div>
-                    <div class="flex flex-col px-4 pb-4">
-                        <div class="font-bold flex items-center gap-2 text-neutral-300 text-sm sm:text-lg font-galaxy">
-                            {one.data.role}
-                            <a href={one.data.url} target="_blank">
-                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                            </a>
-                        </div>
-                        <div class="font-extralight mb-2 text-neutral-300 text-[10px] sm:text-xs">{one.data.id}</div>
-                        <div class="font-extralight mb-6 text-neutral-400 text-[10px] sm:text-xs">{one.data.time}</div>
-                        <div class="font-extralight text-neutral-400 font-galaxy text-[12px] sm:text-sm">{one.data.job}</div>
-                    </div>
-                </div>
-            ))}
-        </div>
+<section id="experience" class="px-6 sm:px-10 py-28 border-t border-dust">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-16 items-start">
+
+    <div class="fade-up">
+      <span class="sec-tag">— Experience</span>
+      <em class="block font-body italic text-xl text-cream/70 mb-3">where I've been</em>
+      <h2
+        class="font-display font-light text-fog leading-[0.92] tracking-tight"
+        style="font-size: clamp(2.75rem, 5.5vw, 4.5rem);"
+      >
+        Work<br><span class="text-parchment">History</span>
+      </h2>
     </div>
-    
+
+    <div class="fade-up" style="transition-delay:0.1s">
+      <div class="flex flex-col">
+        {experiences.map(exp => (
+          <div class="grid grid-cols-[1.25rem_1fr] gap-x-6 group">
+            <div class="flex flex-col items-center pt-1">
+              <div class="w-[5px] h-[5px] rounded-full border border-ash bg-ink flex-shrink-0 transition-all duration-300 group-hover:border-parchment group-hover:shadow-[0_0_8px_rgba(201,169,110,0.4)]"></div>
+              <div class="w-px flex-1 bg-gradient-to-b from-dust to-transparent mt-1.5 min-h-8"></div>
+            </div>
+            <div class="pb-10">
+              <p class="font-galaxy text-[0.5rem] tracking-[0.2em] uppercase text-ash mb-1.5">{exp.data.time}</p>
+              <div class="flex items-center gap-2 mb-1">
+                <span
+                  class="font-display font-light text-fog tracking-wide"
+                  style="font-size: clamp(1.1rem, 2vw, 1.4rem);"
+                >
+                  {exp.data.role}
+                </span>
+                <a href={exp.data.url} target="_blank"
+                   class="text-dust hover:text-parchment transition-colors duration-200 flex-shrink-0"
+                   aria-label="Link">
+                  <svg class="w-[10px] h-[10px]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/>
+                    <line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                </a>
+              </div>
+              <p class="font-body italic text-sm text-ash mb-3">{exp.data.id}</p>
+              <p class="font-body text-base text-cream/65 leading-relaxed">{exp.data.job}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
 </section>
