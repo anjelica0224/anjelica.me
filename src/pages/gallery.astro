@@ -59,14 +59,16 @@ const snapshots = [
                     </ul>
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div>
                 <span class="text-cream text-md col-span-full font-galaxy underline-offset-4 italic underline">scribbles</span>
-                {random.map((note) => (
-                    <div class="text-ash hover:bg-ink transition-colors flex flex-col gap-4 font-galaxy bg-vellum p-4 text-xs w-fit h-fit">
-                    <p>{note.data.body}</p>
-                    <span class="text-[10px] italic">{note.data.author}</span>
-                    </div>
-                ))}
+                <div class="mt-4 columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+                    {random.map((note) => (
+                        <div class="break-inside-avoid text-ash hover:bg-ink transition-colors flex flex-col gap-4 font-galaxy bg-vellum p-4 text-xs w-full">
+                            <p>{note.data.body}</p>
+                            <span class="text-[10px] italic">{note.data.author}</span>
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
 
