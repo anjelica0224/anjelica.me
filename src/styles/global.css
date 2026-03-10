@@ -164,20 +164,6 @@ a { text-decoration: none; }
 .waves-svg { position: relative; height: 100%; width: 100%; }
 .wave-layer { fill: #0d0b08; animation: wave 25s cubic-bezier(0.5,0.5,0.45,0.5) infinite; }
 
-.firefly {
-  position: fixed; left: 50%; top: 50%;
-  width: 0.4vw; height: 0.4vw;
-  margin: -0.2vw 0 0 9.8vw;
-  animation: ease 200s alternate infinite;
-  pointer-events: none; z-index: 1;
-}
-.firefly::before, .firefly::after {
-  content: ''; position: absolute; width: 100%; height: 100%;
-  border-radius: 50%; transform-origin: -10vw;
-}
-.firefly::before { background: black; opacity: 0.4; animation: drift ease alternate infinite; }
-.firefly::after  { background: white; opacity: 0; box-shadow: 0 0 0vw 0vw #c9a96e; animation: drift ease alternate infinite, flash ease infinite; }
-
 .fade-up {
   opacity: 0;
   transform: translateY(18px);
@@ -231,11 +217,6 @@ section { animation: pageIn 0.6s ease forwards; }
 @keyframes wave {
   0%   { transform: translate3d(-90px, 0, 0); }
   100% { transform: translate3d(85px, 0, 0); }
-}
-@keyframes drift { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-@keyframes flash {
-  0%, 30%, 100% { opacity: 0; box-shadow: 0 0 0vw 0vw #c9a96e; }
-  5%            { opacity: 1; box-shadow: 0 0 2vw 0.4vw #c9a96e; }
 }
 @keyframes pageIn {
   from { opacity: 0; transform: translateY(5px); }
