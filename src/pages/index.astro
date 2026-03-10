@@ -1,22 +1,32 @@
 ---
 import HomeLayout from '../layouts/HomeLayout.astro';
-import Hero from '../components/Hero.astro';
-import About from '../components/About.astro';
+import MastHead from '../components/MastHead.astro';
+import GitHub from '../components/GitHub.astro';
 import Experience from '../components/Experience.astro';
 import Projects from '../components/projects.astro';
 ---
 <HomeLayout>
-  <Hero />
-  <About />
-  <Experience />
-  <Projects />
+
+  <MastHead header="/header-image.webp" profile="/anjelica.webp" title="Anjelica" />
+
+  <div class="max-w-3xl mx-auto px-4 sm:px-8 pt-8 sm:pt-12 pb-16 sm:pb-24">
+
+    <div class="mb-12 sm:mb-16 opacity-0 animate-[fadeIn_0.8s_ease_2.6s_forwards]">
+      <p class="font-body text-cream/80 text-[0.95rem] sm:text-[1.1rem] leading-[1.8] mb-4">
+        I'm an undergrad at Plaksha University majoring in Computer Science &amp; Artificial Intelligence.
+        Currently building
+        <a href="#projects" class="text-parchment underline underline-offset-2 decoration-parchment/30 hover:decoration-parchment/70 transition-all">UnDrift</a>
+        — a real-time, privacy-first distraction-aware AI assistant.
+      </p>
+      <p class="font-body text-cream/55 text-[0.9rem] sm:text-[1.05rem] leading-[1.8]">
+        I'm curious about tech and build things I care about.
+      </p>
+    </div>
+
+    <GitHub />
+    <Experience />
+    <Projects />
+
+  </div>
+
 </HomeLayout>
-<script>
-  const observer = new IntersectionObserver(
-    (entries) => entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-    }),
-    { threshold: 0.1 }
-  );
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-</script>
