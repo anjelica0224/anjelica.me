@@ -1,7 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro'; 
 import FormattedDate from '../components/FormattedDate.astro';
-import Menu from '../components/Menu.astro';
 import { list } from '../components/Intro.astro';
 import { getCollection} from 'astro:content';
 const bookshelf = await getCollection('books');
@@ -16,32 +15,24 @@ const snapshots = [
     {url: '/assets/snap/snap-2.webp', text: '2022'},
 ]
 ---
-<SiteLayout headerImage="/header-image.webp" pfp="/anjelica.webp">
+<SiteLayout headerImage="/header-image.webp" pfp="/anjelica.webp" currentPage="gallery">
     <div class="sm:grid sm:grid-cols-4 gap-4">
         <aside class="sm:w-3/5 hidden md:flex md:flex-col left-4" >
-            <div class="mt-20 mb-40 flex gap-6 flex-col text-center text-neutral-500 text-lg font-galaxy mx-auto">
-                <Menu active="Gallery"/>
-            </div>
-            <!-- <div class="grow"></div> -->
-            <img src="/up.webp" class="scale-280 ml-18 ">
+            <img src="/up.webp" class="mt-20 scale-280 ml-18 ">
             <img src="/all.webp" class="scale-280 mt-20 mb-20 ml-20"/>
             <img src="/aya.webp" class="rounded-2xl ml-16 mt-20 scale-150"/>
 
-            <!-- <div class="grow"></div> -->
-            <!-- <img src="/castle3.webp" class="scale-y-120 scale-x-180"/> -->
         </aside>
-        <section class="col-span-4 mx-20 md:col-span-2 md:mx-0  mb-40">    
+        <section class="col-span-4 mx-20 md:col-span-2 md:mx-0  mb-40">
             <div>
-                <div class="text-neutral-300 sm:w-1/2 w-3/5 text-lg sm:text-2xl font-galaxy font-extrabold">smth about me</div>
-                <hr class="line absolute my-2"/>
-                <div class="my-6 text-neutral-400 font-galaxy">
+                <div class="my-6 text-cream/80 font-body">
                     {list.map((line) => (
-                        <p class="p-2 tracking-wider">{line}</p>
+                        <p class="p-2 text-[0.95rem] sm:text-[1.1rem] leading-[1.8]">{line}</p>
                     ))}
                 </div>
             </div>
             <div>
-                <span class=" text-neutral-300 text-md font-galaxy">Snapshots</span>
+                <span class=" text-cream text-md font-galaxy">Snapshots</span>
                 <hr class="line absolute my-2"/>
                 <div class="flex mt-4 gap-4">
                     <div class="grid mx-auto my-6 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -53,25 +44,25 @@ const snapshots = [
             </div>
             <div class="md:grid md:grid-cols-2">
                 <div>
-                    <span class=" text-neutral-300 text-md font-galaxy underline-offset-4 italic underline">books that i could read all over again</span>
-                    <ul class="list-none list-inside p-4 font-galaxy text-neutral-400 text-sm">
+                    <span class=" text-cream text-md font-galaxy underline-offset-4 italic underline">books that i could read all over again</span>
+                    <ul class="list-none list-inside p-4 font-galaxy text-ash text-sm">
                         {bookshelf.map((one)=>(
                             <li class="my-2 italic">{one.data.title}</li>
                         ))}
                     </ul>
                 </div>
                 <div>
-                    <span class=" text-neutral-300 text-md font-galaxy underline-offset-4 italic underline">black holes & other things</span>
-                    <ul class="list-none list-inside p-4 font-galaxy text-neutral-400 text-sm">
-                        <li class="my-2"><a href="/blog/black_holes_1/" class="italic hover:text-white transition-colors">black holes pt.1</a></li>
+                    <span class=" text-cream text-md font-galaxy underline-offset-4 italic underline">black holes & other things</span>
+                    <ul class="list-none list-inside p-4 font-galaxy text-ash text-sm">
+                        <li class="my-2"><a href="/blog/black_holes_1/" class="italic hover:text-cream transition-colors">black holes pt.1</a></li>
                         <li class="my-2"><a href="/blog/black_holes_2/" class="italic hover:text-white transition-colors">black holes pt.2</a></li>
                     </ul>
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <span class="text-neutral-300 text-md col-span-full font-galaxy underline-offset-4 italic underline">scribbles</span>
+                <span class="text-cream text-md col-span-full font-galaxy underline-offset-4 italic underline">scribbles</span>
                 {random.map((note) => (
-                    <div class="text-neutral-400 hover:bg-midnight-black transition-colors flex flex-col gap-4 font-galaxy bg-brown p-4 text-xs w-fit h-fit">
+                    <div class="text-ash hover:bg-ink transition-colors flex flex-col gap-4 font-galaxy bg-vellum p-4 text-xs w-fit h-fit">
                     <p>{note.data.body}</p>
                     <span class="text-[10px] italic">{note.data.author}</span>
                     </div>

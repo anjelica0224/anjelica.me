@@ -6,17 +6,19 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Firefly from '../components/Firefly.astro';
 import { imageConfig } from 'astro:assets';
-const { name, headerImage, pfp } = Astro.props;
+const { name, headerImage, pfp, currentPage } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="bg-midnight-black flex flex-col">
+	<body class="bg-ink flex flex-col">
+		<div class="grain" aria-hidden="true"></div>
+		<div class="vignette" aria-hidden="true"></div>
 		<Firefly/>
 		<main>
-            <Header/>
+            <Header currentPage={currentPage}/>
             <MastHead title={name} header={headerImage} profile={pfp}/>
             <slot/>
 		</main>

@@ -5,11 +5,32 @@ import { IoLogoTwitter } from "react-icons/io";
 import { PiGoodreadsLogoBold } from "react-icons/pi";
 import { AiFillSpotify } from "react-icons/ai";
 import { FaLink } from "react-icons/fa6";
+
+const navLinks = [
+  { label: 'Home', url: '/', key: 'home' },
+  { label: 'Blog', url: '/blog', key: 'blog' },
+  { label: 'Gallery', url: '/gallery', key: 'gallery' },
+];
 ---
 
-<header class="backdrop-blur-md sticky z-50 mx-auto top-0 p-4">
+<header class="backdrop-blur-md sticky z-50 mx-auto top-0 px-6 sm:px-10 py-4">
 	<nav>
-		<div class="social-links gap-8 flex justify-end-safe">
+		<div class="flex items-center justify-between">
+		<div class="nav-links flex items-baseline gap-5 sm:gap-8">
+			{navLinks.map(link => (
+				<a href={link.url} class="font-body text-[0.9rem] sm:text-[1rem] text-cream hover:text-cream transition-colors">{link.label}</a>
+			))}
+		</div>
+
+		<button id="menu-toggle" class="sm:hidden text-cream p-1" aria-label="Toggle menu">
+			<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+				<line x1="3" y1="12" x2="21" y2="12"/>
+				<line x1="3" y1="6" x2="21" y2="6"/>
+				<line x1="3" y1="18" x2="21" y2="18"/>
+			</svg>
+		</button>
+
+		<div class="social-links gap-8 hidden sm:flex">
 			<a href="https://github.com/anjelica0224" target="_blank">
 				<IoLogoGithub className="w-6 h-6 text-neutral-300"/>
 			</a>
@@ -17,10 +38,10 @@ import { FaLink } from "react-icons/fa6";
 				<IoLogoLinkedin className="w-6 h-6 text-neutral-300"/>
 			</a>
 			<a href="https://x.com/dysphoricsimon" target="_blank">
-				<IoLogoTwitter className="w-6 h-6 text-neutral-300">
+				<IoLogoTwitter className="w-6 h-6 text-neutral-300"/>
 			</a>
 			<a href="https://www.goodreads.com/user/show/94697968-aj" target="_blank">
-				<PiGoodreadsLogoBold className="w-6 h-6 text-neutral-300">
+				<PiGoodreadsLogoBold className="w-6 h-6 text-neutral-300"/>
 			</a>
 			<a href="https://open.spotify.com/user/31yygiallrnyltqh43ejb64y3zmm" target="_blank">
 				<AiFillSpotify className="w-6 h-6 text-neutral-300"/>
@@ -29,5 +50,38 @@ import { FaLink } from "react-icons/fa6";
 				<FaLink className="w-6 h-6 scale-90 text-neutral-300"/>
 			</a>
 		</div>
+		</div>
 	</nav>
+
+	<div id="mobile-menu" class="sm:hidden hidden flex-col items-center gap-4 py-4 border-t border-dust mt-3">
+		<div class="flex gap-6">
+			<a href="https://github.com/anjelica0224" target="_blank">
+				<IoLogoGithub className="w-5 h-5 text-neutral-300"/>
+			</a>
+			<a href="https://www.linkedin.com/in/anjelica-b64844211/" target="_blank">
+				<IoLogoLinkedin className="w-5 h-5 text-neutral-300"/>
+			</a>
+			<a href="https://x.com/dysphoricsimon" target="_blank">
+				<IoLogoTwitter className="w-5 h-5 text-neutral-300"/>
+			</a>
+			<a href="https://www.goodreads.com/user/show/94697968-aj" target="_blank">
+				<PiGoodreadsLogoBold className="w-5 h-5 text-neutral-300"/>
+			</a>
+			<a href="https://open.spotify.com/user/31yygiallrnyltqh43ejb64y3zmm" target="_blank">
+				<AiFillSpotify className="w-5 h-5 text-neutral-300"/>
+			</a>
+			<a href="https://dysphoricsimon3.wixsite.com/fabricatednutshell?fbclid=PAZXh0bgNhZW0CMTEAAacmvxMtzg7oktqvWg1Y0k44numK8c2HEOw3VezUfKF1QqtoUxOFxKPumdJf4Q_aem_-22uWvW0s6RkQ5MH11K3nA" target="_blank">
+				<FaLink className="w-5 h-5 scale-90 text-neutral-300"/>
+			</a>
+		</div>
+	</div>
 </header>
+
+<script>
+	const toggle = document.getElementById('menu-toggle');
+	const menu = document.getElementById('mobile-menu');
+	toggle?.addEventListener('click', () => {
+		menu?.classList.toggle('hidden');
+		menu?.classList.toggle('flex');
+	});
+</script>

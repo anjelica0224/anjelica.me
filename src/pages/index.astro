@@ -1,15 +1,32 @@
 ---
-import About from '../components/About.astro';
-import Intro from '../components/Intro.astro';
+import HomeLayout from '../layouts/HomeLayout.astro';
+import MastHead from '../components/MastHead.astro';
+import GitHub from '../components/GitHub.astro';
 import Experience from '../components/Experience.astro';
 import Projects from '../components/projects.astro';
-import SiteLayout from '../layouts/SiteLayout.astro';
 ---
-<SiteLayout name="Anjelica" headerImage="/header-image.webp" pfp="/anjelica.webp">
-	<div>
-		<About/>
-		<Intro/>
-		<Experience/>
-		<Projects/>
-	</div>
-</SiteLayout>
+<HomeLayout>
+
+  <MastHead header="/header-image.webp" profile="/anjelica.webp" title="Anjelica" />
+
+  <div class="max-w-3xl mx-auto px-4 sm:px-8 pt-8 sm:pt-12 pb-16 sm:pb-24">
+
+    <div class="mb-12 sm:mb-16 opacity-0 animate-[fadeIn_0.8s_ease_2.6s_forwards]">
+      <p class="font-body text-cream/80 text-[0.95rem] sm:text-[1.1rem] leading-[1.8] mb-4">
+        I'm an undergrad at Plaksha University majoring in Computer Science &amp; Artificial Intelligence.
+        Currently building
+        <a href="#projects" class="text-parchment underline underline-offset-2 decoration-parchment/30 hover:decoration-parchment/70 transition-all">UnDrift</a>
+        — a real-time, privacy-first distraction-aware AI assistant.
+      </p>
+      <p class="font-body text-cream/55 text-[0.9rem] sm:text-[1.05rem] leading-[1.8]">
+        I'm curious about tech and build things I care about.
+      </p>
+    </div>
+
+    <GitHub />
+    <Experience />
+    <Projects />
+
+  </div>
+
+</HomeLayout>
