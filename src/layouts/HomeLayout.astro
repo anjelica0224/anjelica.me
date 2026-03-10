@@ -43,14 +43,30 @@ import Footer from '../components/Footer.astro';
 
 
     <script>
-      window.addEventListener('load', () => {
-        setTimeout(() => {
-          const loader = document.getElementById('loading-screen');
-          const content = document.getElementById('page-content');
-          if (loader) loader.classList.add('fade-out');
-          if (content) content.classList.add('visible');
-        }, 1500);
-      });
+      const hasLoaded = sessionStorage.getItem('hasLoaded');
+      const loader = document.getElementById('loading-screen');
+      const content = document.getElementById('page-content');
+
+      if (hasLoaded) {
+        if (loader) loader.remove();
+        if (content) {
+          content.classList.remove('opacity-0');
+          content.classList.add('visible');
+        }
+        document.querySelectorAll<HTMLElement>('[class*="animate-[fadeIn"]').forEach(el => {
+          el.classList.remove('opacity-0');
+          el.style.opacity = '1';
+          el.style.animation = 'none';
+        });
+      } else {
+        window.addEventListener('load', () => {
+          setTimeout(() => {
+            if (loader) loader.classList.add('fade-out');
+            if (content) content.classList.add('visible');
+            sessionStorage.setItem('hasLoaded', '1');
+          }, 1500);
+        });
+      }
     </script>
   </body>
   <Footer>
