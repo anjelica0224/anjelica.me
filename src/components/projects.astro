@@ -3,62 +3,26 @@ import { getCollection } from 'astro:content';
 const projects = await getCollection('projects');
 ---
 
-<section id="projects" class="px-6 sm:px-10 py-28 border-t border-dust">
-  <div class="max-w-6xl mx-auto">
-
-    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 mb-16 fade-up">
-      <div>
-        <span class="sec-tag">— Selected Works</span>
-        <em class="block font-body italic text-xl text-cream/70 mb-3">things I've made</em>
-        <h2
-          class="font-display font-light text-fog leading-[0.92] tracking-tight"
-          style="font-size: clamp(2.75rem, 5.5vw, 4.5rem);"
-        >
-          Projects<br><span class="text-parchment">&amp; Work</span>
-        </h2>
-      </div>
-      <p class="font-body italic text-base text-ash sm:text-right sm:max-w-[24ch] leading-relaxed">
-        exploring, building, and learning along the way ♡
-      </p>
-    </div>
-
-    <div class="flex flex-col fade-up" style="transition-delay:0.1s">
-      {projects.map((proj, i) => (
-        
-        <a href={proj.data.url} target="_blank"
-          class="group relative grid grid-cols-[2.5rem_1fr] sm:grid-cols-[3rem_1fr_180px] items-center gap-4 sm:gap-6 py-7 border-t border-dust last:border-b hover:bg-vellum transition-colors duration-300 no-underline px-2"
-        >
-          <span class="font-galaxy text-[0.5rem] tracking-[0.2em] text-ash group-hover:text-parchment transition-colors duration-300">
-            {String(i + 1).padStart(2, '0')}
+<section id="projects" class="opacity-0 animate-[fadeIn_0.8s_ease_3.2s_forwards]">
+  <h2 class="font-body font-normal text-cream text-[1.05rem] sm:text-[1.2rem] mb-5 sm:mb-6">Projects</h2>
+  <div class="flex flex-col gap-6">
+    {projects.map(proj => (
+      <a href={proj.data.url} target="_blank" rel="noopener noreferrer"
+         class="group block no-underline hover:bg-vellum/20 -mx-3 px-3 py-3 rounded transition-colors duration-200">
+        <div class="flex items-baseline justify-between gap-4 mb-0.5">
+          <span class="font-body font-normal text-cream/90 text-[0.95rem] sm:text-[1.1rem] underline underline-offset-2 decoration-dust group-hover:text-parchment group-hover:decoration-parchment transition-colors">
+            {proj.data.id}
           </span>
-
-          <div>
-            <span
-              class="font-display font-light text-fog group-hover:text-cream transition-colors duration-300 block mb-1.5 tracking-wide"
-              style="font-size: clamp(1.2rem, 2.2vw, 1.65rem);"
-            >
-              {proj.data.id}
+        </div>
+        <p class="font-body text-cream/50 text-[0.85rem] sm:text-[1rem] leading-[1.7] mb-2">{proj.data.excerpt}</p>
+        <div class="flex flex-wrap gap-1.5">
+          {proj.data.tech.map(tag => (
+            <span class="font-body text-[0.7rem] sm:text-[0.8rem] text-ash border border-dust/60 px-1.5 py-0.5 rounded group-hover:border-ash/40 transition-colors">
+              {tag}
             </span>
-            <p class="font-body italic text-base text-cream/60 leading-snug">{proj.data.excerpt}</p>
-          </div>
-
-          <div class="hidden sm:flex flex-col items-end gap-1.5">
-            {proj.data.tech.map(tag => (
-              <span class="font-galaxy text-[0.45rem] tracking-[0.12em] uppercase text-ash border border-dust group-hover:border-ash group-hover:text-cream/70 transition-all duration-200 px-2 py-0.5">
-                {tag}
-              </span>
-            ))}
-          </div>
-
-          <div class="absolute right-2 top-1/2 -translate-y-1/2 text-dust group-hover:text-parchment group-hover:translate-x-0.5 group-hover:-translate-y-[calc(50%+2px)] transition-all duration-300">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-              <line x1="7" y1="17" x2="17" y2="7"/>
-              <polyline points="7 7 17 7 17 17"/>
-            </svg>
-          </div>
-        </a>
-      ))}
-    </div>
-
+          ))}
+        </div>
+      </a>
+    ))}
   </div>
 </section>

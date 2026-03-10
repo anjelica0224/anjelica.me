@@ -1,49 +1,23 @@
 ---
 import { AiOutlineMail } from "react-icons/ai";
 import { IoLogoGithub } from "react-icons/io5";
-const today = new Date();
+const today = new Date()
 ---
 
-<footer id="connect" class="border-t border-dust px-6 sm:px-10 pt-20 pb-10">
-  <div class="max-w-6xl mx-auto">
-
-    <span class="sec-tag">— Get in Touch</span>
-    <em class="block font-body italic text-base sm:text-lg text-ash mb-3">let's talk</em>
-    <h2 class="font-display font-light text-[clamp(3.5rem,9vw,8rem)] leading-[0.9] text-cream mb-14 tracking-tight">
-      Connect<span class="text-parchment">—</span>
-    </h2>
-
-    <div class="flex flex-wrap gap-x-12 gap-y-8 mb-16">
-      <a href="mailto:hi@anjelica.me" class="group flex flex-col gap-1">
-        <span class="font-galaxy text-[0.4rem] tracking-[0.3em] uppercase text-ember">Email</span>
-        <span class="font-display font-light text-xl sm:text-2xl text-cream group-hover:text-parchment transition-colors duration-300 tracking-wide">hi@anjelica.me</span>
-      </a>
-      <a href="https://www.linkedin.com/in/anjelica-b64844211/" target="_blank" class="group flex flex-col gap-1">
-        <span class="font-galaxy text-[0.4rem] tracking-[0.3em] uppercase text-ember">LinkedIn</span>
-        <span class="font-display font-light text-xl sm:text-2xl text-cream group-hover:text-parchment transition-colors duration-300 tracking-wide">Anjelica</span>
-      </a>
-      <a href="https://github.com/anjelica0224" target="_blank" class="group flex flex-col gap-1">
-        <span class="font-galaxy text-[0.4rem] tracking-[0.3em] uppercase text-ember">GitHub</span>
-        <span class="font-display font-light text-xl sm:text-2xl text-cream group-hover:text-parchment transition-colors duration-300 tracking-wide">anjelica0224</span>
-      </a>
-      <a href="https://x.com/dysphoricsimon" target="_blank" class="group flex flex-col gap-1">
-        <span class="font-galaxy text-[0.4rem] tracking-[0.3em] uppercase text-ember">Twitter / X</span>
-        <span class="font-display font-light text-xl sm:text-2xl text-cream group-hover:text-parchment transition-colors duration-300 tracking-wide">@dysphoricsimon</span>
-      </a>
-      <a href="/blog" class="group flex flex-col gap-1">
-        <span class="font-galaxy text-[0.4rem] tracking-[0.3em] uppercase text-ember">Writing</span>
-        <span class="font-display font-light text-xl sm:text-2xl text-cream group-hover:text-parchment transition-colors duration-300 tracking-wide">my fabricated nutshell</span>
-      </a>
-    </div>
-
-    <div class="flex flex-wrap justify-between items-center gap-4 pt-6 border-t border-dust">
-      <span class="font-galaxy text-[0.4rem] tracking-[0.25em] uppercase text-ember">
-        &copy; {today.getFullYear()} Anjelica — All rights reserved
-      </span>
-      <span class="font-body italic text-sm text-ember">
-        built with curiosity &amp; candlelight
-      </span>
-    </div>
-
-  </div>
+<footer>
+	<div class="text-center flex sm:justify-center sm:gap-10 text-xs sm:flex-row flex-col items-center gap-4 text-ash pt-4 pb-4 font-galaxy">
+		<p>&copy; {today.getFullYear()} Anjelica</p>
+		<p class="flex items-center gap-1">
+			Get in Touch!
+			<a href="mailto:hi@anjelica.me">
+				<AiOutlineMail/> 
+			</a>
+		</p>
+		<div class="flex items-center gap-1">
+			This site is open source 
+			<a href="https://github.com/anjelica0224/mine" target="_blank">
+				<IoLogoGithub/> 
+			</a>
+		</span>
+	</div>
 </footer>
