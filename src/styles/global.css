@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=EB+Garamond:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 @plugin '@tailwindcss/typography';
 
@@ -136,15 +136,28 @@ a { text-decoration: none; }
   color: #8a8078;
 }
 .prose a { color: #c9a96e; }
-.prose > p:first-of-type::first-letter {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 4.5em;
-  font-weight: 300;
-  line-height: 0.75;
-  float: left;
-  margin-right: 0.08em;
-  margin-top: 0.08em;
+.prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.875em;
   color: #c9a96e;
+  background: #1a1812;
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+}
+.prose code::before, .prose code::after { content: none; }
+.prose em, .prose i {
+  font-family: "EB Garamond", Georgia, serif !important;
+  font-style: italic !important;
+}
+.prose strong, .prose b {
+  font-family: "EB Garamond", Georgia, serif !important;
+  font-weight: 500 !important;
+}
+.prose strong em, .prose em strong,
+.prose b i, .prose i b {
+  font-family: "EB Garamond", Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 500 !important;
 }
 
 .waves { position: absolute; bottom: 0; left: 0; width: 100%; height: 15vh; min-height: 50px; max-height: 150px; z-index: 20; }

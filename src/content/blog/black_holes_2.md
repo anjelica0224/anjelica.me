@@ -36,9 +36,9 @@ So when an individual large enough star collapses, it continues to contract and 
 
 <ins>**The Event Horizon**</ins>
 
-The gravitational field at the surface of a black hole is incredibly large, and somehow manages to bend the path of light inwards, so much that it can no longer escape the boundary which is called the **event horizon**. 
+The gravitational field at the surface of a black hole is incredibly large, and somehow manages to bend the path of light inwards, so much that it can no longer escape the boundary which is called the ***event horizon***. 
 
-It corresponds to a wave front of light from the star that just fails to escape to infinity but remains hovering at the **Schwarzschild radius**: `2 GM/√c`, where G is Newton's constant of gravity, M is the mass of the star, and c is the velocity of light. For a star of about ten solar masses, the Schwarzschild radius is about thirty kilometres.
+It corresponds to a wave front of light from the star that just fails to escape to infinity but remains hovering at the ***Schwarzschild radius***: `2 GM/√c`, where G is Newton's constant of gravity, M is the mass of the star, and c is the velocity of light. For a star of about ten solar masses, the Schwarzschild radius is about thirty kilometres.
 
 **Wavefront of light**: A wavefront of light refers to the leading edge of that wave – the "crest" of the ripple, so to speak. The event horizon corresponds to the point where the immense gravity bends the wavefronts of light so much that they can't travel outwards anymore. They are kind of "stuck" at that boundary.
 
