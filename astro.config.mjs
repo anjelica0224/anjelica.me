@@ -9,7 +9,7 @@ import yaml from '@rollup/plugin-yaml';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://anjelica.me',
   integrations: [mdx(), sitemap(), react()],
 
   vite: {
