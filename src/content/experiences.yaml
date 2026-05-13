@@ -1,5 +1,11 @@
 - company:
   id: Agmitra Technologies
+  role: Full Stack Developer 
+  time: April 2026 - Present
+  job: Contributing towards the making of Zariya Recruit as a full stack developer intern.
+  url: https://oddmindinnovations.framer.website/
+- company:
+  id: Agmitra Technologies
   role: Software Intern
   time: May 2025 - June 2025
   job: Worked on optimization polarimeter algorithms for DigiSugar in R&D  and hosted/enhanced the React/Express/MongoDB website by adding new features.
