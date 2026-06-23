@@ -21,7 +21,7 @@ const experiences = await getCollection('experiences');
             <span class="font-body text-[0.75rem] sm:text-[0.9rem] text-ash whitespace-nowrap">{exp.data.time}</span>
           </div>
           <p class="font-body italic text-[0.8rem] sm:text-[0.95rem] text-ash mb-1">{exp.data.id}</p>
-          <p class="font-body text-cream/50 text-[0.85rem] sm:text-[1rem] leading-[1.7]">{exp.data.job}</p>
+          {exp.data.job && <p class="font-body text-cream/50 text-[0.85rem] sm:text-[1rem] leading-[1.7]">{exp.data.job}</p>}
         </div>
       </div>
     ))}

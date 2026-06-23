@@ -7,22 +7,40 @@ const projects = await getCollection('projects');
   <h2 class="font-body font-normal text-cream text-[1.05rem] sm:text-[1.2rem] mb-5 sm:mb-6">Projects</h2>
   <div class="flex flex-col gap-6">
     {projects.map(proj => (
-      <a href={proj.data.url} target="_blank" rel="noopener noreferrer"
-         class="group block no-underline hover:bg-vellum/20 -mx-3 px-3 py-3 rounded transition-colors duration-200">
+      <div class="group block -mx-3 px-3 py-3 rounded hover:bg-vellum/20 transition-colors duration-200">
         <div class="flex items-baseline justify-between gap-4 mb-0.5">
-          <span class="font-body font-normal text-cream/90 text-[0.95rem] sm:text-[1.1rem] underline underline-offset-2 decoration-dust group-hover:text-parchment group-hover:decoration-parchment transition-colors">
+          <a href={proj.data.url} target="_blank" rel="noopener noreferrer"
+             class="font-body font-normal text-cream/90 text-[0.95rem] sm:text-[1.1rem] underline underline-offset-2 decoration-dust hover:text-parchment hover:decoration-parchment transition-colors no-underline">
             {proj.data.id}
-          </span>
+          </a>
         </div>
         <p class="font-body text-cream/50 text-[0.85rem] sm:text-[1rem] leading-[1.7] mb-2">{proj.data.excerpt}</p>
-        <div class="flex flex-wrap gap-1.5">
+        <div class="flex flex-wrap gap-1.5 mb-2.5">
           {proj.data.tech.map(tag => (
             <span class="font-body text-[0.7rem] sm:text-[0.8rem] text-ash border border-dust/60 px-1.5 py-0.5 rounded group-hover:border-ash/40 transition-colors">
               {tag}
             </span>
           ))}
         </div>
-      </a>
+        <div class="flex gap-3">
+          <a href={proj.data.url} target="_blank" rel="noopener noreferrer"
+             class="font-body text-[0.75rem] sm:text-[0.85rem] text-cream/40 hover:text-cream/70 transition-colors no-underline">
+            GitHub
+          </a>
+          {proj.data.youtube && (
+            <a href={proj.data.youtube} target="_blank" rel="noopener noreferrer"
+               class="font-body text-[0.75rem] sm:text-[0.85rem] text-cream/40 hover:text-cream/70 transition-colors no-underline">
+              YouTube
+            </a>
+          )}
+          {proj.data.demo && (
+            <a href={proj.data.demo} target="_blank" rel="noopener noreferrer"
+               class="font-body text-[0.75rem] sm:text-[0.85rem] text-cream/40 hover:text-cream/70 transition-colors no-underline">
+              Live Demo
+            </a>
+          )}
+        </div>
+      </div>
     ))}
   </div>
 </section>

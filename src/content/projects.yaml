@@ -1,13 +1,10 @@
-- websocket:
-  id: Bell Jar
-  excerpt: Real-time chat server with quirky bandnames, cool avatars, supports all media files upto 5 MB.  
-  tech: [React.js, Node.js, TailwindCSS, WebSocket]
-  url: https://github.com/anjelica0224/websocket
-- emotion:
-  id: Emotion Recognition in Sarcasm
-  excerpt: Multi-modal emotion recognition in Code-Mixed(Hinglish) sarcastic utterances.
-  tech: [ Python, Random Forest, Neural network]
-  url: https://github.com/IshitaR0/EmotionsInOurSarcasm
+- navbot:
+  id: NavBot
+  excerpt: An AI chatbot-as-a-service. Any website owner can add a smart Q&A chatbot to their site in under 5 minutes, no ML knowledge, no backend changes. NavBot crawls your website, indexes the content into a vector database, and gives you a chatbot that answers only from your site's content with source links.
+  tech: [React, Typescript, ChromaDB, Sarvam API, RAG]
+  url: https://github.com/cherie-dips/NavBot
+  youtube: https://www.youtube.com/watch?v=dQ3EHuyKFAg
+  demo: https://navbot-web.onrender.com
 - celestia:
   id: Celestia
   excerpt: A celestial event tracker mobile application.
@@ -18,13 +15,13 @@
   excerpt: Crowd-sourced language learning application.
   tech: [Typescript, React.js, Prisma, MongoDB, RESTFul Apis]
   url: https://github.com/freeCodeCamp-2025-Summer-Hackathon/rose-token
-- navbot:
-  id: NavBot
-  excerpt: A chat-widget that acts like a navigation assistant that reads websites + answers questions(work in progress).
-  tech: [React, Typescript, turborepo, TailwindCSS, Langchain]
-  url: https://github.com/cherie-dips/NavBot
-- subsad:
-  id: SubsAd
-  excerpt: Platform for substitute teachers in schools. (work in progress)
-  tech: [React.js, MongoDB, Clerk, Express.js]
-  url: https://github.com/anjelica0224/SubsAd
+- websocket:
+  id: Bell Jar
+  excerpt: Real-time chat server with quirky bandnames, cool avatars, supports all media files upto 5 MB.
+  tech: [React.js, Node.js, TailwindCSS, WebSocket]
+  url: https://github.com/anjelica0224/websocket
+- emotion:
+  id: Emotion Recognition in Sarcasm
+  excerpt: Multi-modal emotion recognition in Code-Mixed(Hinglish) sarcastic utterances.
+  tech: [Python, Random Forest, Neural network]
+  url: https://github.com/IshitaR0/EmotionsInOurSarcasm
